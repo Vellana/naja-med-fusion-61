@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
-import najaLogo from '@/assets/naja-logo.png';
+import najaLogo from '@/assets/naja-logo-new.png';
 
 const Footer = () => {
   const navigationLinks = [
@@ -32,7 +32,7 @@ const Footer = () => {
               <div className="lg:col-span-2 animate-fade-in-up">
                 <div className="flex items-center mb-8">
                   <img 
-                    src={najaLogo} 
+                    src="/lovable-uploads/a8ba7788-a198-4180-a269-982da8c9cdab.png"
                     alt="NAJA Mediterranean" 
                     className="h-16 w-auto filter brightness-0 invert"
                   />

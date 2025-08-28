@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
-import najaLogo from '@/assets/naja-logo.png';
+import najaLogo from '@/assets/naja-logo-new.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,7 +33,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src={najaLogo} 
+              src="/lovable-uploads/a8ba7788-a198-4180-a269-982da8c9cdab.png"
               alt="NAJA Mediterranean" 
               className="h-12 w-auto"
             />
@@ -83,11 +83,11 @@ const Header = () => {
               </a>
             ))}
             <div className="px-4 pt-4 border-t border-border/20">
-              <img 
-                src={najaLogo} 
-                alt="NAJA Mediterranean" 
-                className="h-8 w-auto mb-4"
-              />
+                  <img 
+                    src="/lovable-uploads/a8ba7788-a198-4180-a269-982da8c9cdab.png"
+                    alt="NAJA Mediterranean" 
+                    className="h-8 w-auto mb-4"
+                  />
               <Button className="w-full bg-gradient-primary hover:bg-primary/90 text-primary-foreground">
                 Reserve Now
               </Button>
