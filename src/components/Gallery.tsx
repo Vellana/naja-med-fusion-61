@@ -31,7 +31,7 @@ const Gallery = () => {
     : galleryItems.filter(item => item.category === selectedCategory);
 
   return (
-    <section id="gallery" className="py-32 bg-background relative">
+    <section id="gallery" className="py-32 bg-cream relative">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 section-divider-pattern" />
       <div className="container mx-auto px-6 relative z-10">

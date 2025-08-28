@@ -48,7 +48,7 @@ const Testimonials = () => {
     <section className="py-20 bg-secondary/30 relative">
       {/* Small Pattern Background */}
       <div className="absolute inset-0 hero-pattern-small" />
-      <div className="absolute inset-0 bg-background/95" />
+      <div className="absolute inset-0 bg-cream/95" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">

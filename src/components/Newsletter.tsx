@@ -78,7 +78,7 @@ const Newsletter = () => {
                         placeholder="Enter your email address"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="bg-background/50 border-border focus:border-primary"
+                        className="bg-cream/50 border-border focus:border-primary"
                         required
                       />
                       <Button 
@@ -138,7 +138,7 @@ const Newsletter = () => {
                         placeholder="Your Name"
                         value={contactForm.name}
                         onChange={(e) => handleContactChange('name', e.target.value)}
-                        className="bg-background/50 border-border focus:border-primary"
+                        className="bg-cream/50 border-border focus:border-primary"
                         required
                       />
                       <Input
@@ -146,7 +146,7 @@ const Newsletter = () => {
                         placeholder="Your Email"
                         value={contactForm.email}
                         onChange={(e) => handleContactChange('email', e.target.value)}
-                        className="bg-background/50 border-border focus:border-primary"
+                        className="bg-cream/50 border-border focus:border-primary"
                         required
                       />
                     </div>
@@ -155,14 +155,14 @@ const Newsletter = () => {
                       placeholder="Subject"
                       value={contactForm.subject}
                       onChange={(e) => handleContactChange('subject', e.target.value)}
-                      className="bg-background/50 border-border focus:border-primary"
+                      className="bg-cream/50 border-border focus:border-primary"
                     />
                     
                     <Textarea
                       placeholder="Your Message"
                       value={contactForm.message}
                       onChange={(e) => handleContactChange('message', e.target.value)}
-                      className="bg-background/50 border-border focus:border-primary min-h-32 resize-none"
+                      className="bg-cream/50 border-border focus:border-primary min-h-32 resize-none"
                       required
                     />
                     
