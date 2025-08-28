@@ -72,40 +72,55 @@ const Catering = () => {
           </div>
 
           {/* Package Showcase */}
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-            <div className="animate-fade-in-left">
-              <h3 className="text-3xl font-bold text-navy-foreground mb-6">Signature Mediterranean-American Packages</h3>
-              <div className="space-y-6">
-                <div className="border-l-4 border-gold pl-6">
-                  <h4 className="text-xl font-semibold text-navy-foreground mb-2">The Mediterranean Heritage</h4>
-                  <p className="text-navy-foreground/80">Authentic Mediterranean mezze, grilled specialties, and traditional desserts with modern presentation</p>
-                  <p className="text-gold font-medium mt-2">Starting at $45 per person</p>
+          <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
+            <div className="animate-fade-in-left space-y-8">
+              <h3 className="text-4xl font-light text-navy-foreground mb-8">Signature Catering Experiences</h3>
+              <div className="space-y-8">
+                <div className="relative pl-8">
+                  <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-gold to-accent rounded-full"></div>
+                  <h4 className="text-2xl font-semibold text-navy-foreground mb-3">Mediterranean Heritage</h4>
+                  <p className="text-navy-foreground/90 leading-relaxed mb-3">Traditional Mediterranean mezze, wood-fired specialties, and artisanal desserts reimagined with contemporary American techniques</p>
+                  <p className="text-gold font-semibold text-lg">From $48 per guest</p>
                 </div>
-                <div className="border-l-4 border-gold pl-6">
-                  <h4 className="text-xl font-semibold text-navy-foreground mb-2">The American Fusion</h4>
-                  <p className="text-navy-foreground/80">Innovative Mediterranean-American dishes that showcase our unique culinary creativity and bold flavor combinations</p>
-                  <p className="text-gold font-medium mt-2">Starting at $55 per person</p>
+                <div className="relative pl-8">
+                  <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-accent to-primary rounded-full"></div>
+                  <h4 className="text-2xl font-semibold text-navy-foreground mb-3">American Innovation</h4>
+                  <p className="text-navy-foreground/90 leading-relaxed mb-3">Bold Mediterranean-American fusion showcasing our signature dishes that bridge cultures and celebrate creativity</p>
+                  <p className="text-gold font-semibold text-lg">From $62 per guest</p>
                 </div>
-                <div className="border-l-4 border-gold pl-6">
-                  <h4 className="text-xl font-semibold text-navy-foreground mb-2">The Premium Collection</h4>
-                  <p className="text-navy-foreground/80">Luxury dining experience with premium ingredients and chef-curated wine pairings</p>
-                  <p className="text-gold font-medium mt-2">Starting at $75 per person</p>
+                <div className="relative pl-8">
+                  <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-primary to-gold rounded-full"></div>
+                  <h4 className="text-2xl font-semibold text-navy-foreground mb-3">Luxury Collection</h4>
+                  <p className="text-navy-foreground/90 leading-relaxed mb-3">Premium Mediterranean ingredients meet American culinary artistry with sommelier wine pairings and chef presentation</p>
+                  <p className="text-gold font-semibold text-lg">From $85 per guest</p>
                 </div>
               </div>
             </div>
             
             <div className="animate-fade-in-right">
-              {/* Placeholder for catering package images */}
-              <div className="grid grid-cols-2 gap-4">
-                {[1, 2, 3, 4].map((item) => (
-                  <div key={item} className="aspect-square bg-gradient-elegant rounded-xl shadow-soft hover-lift flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-2">
-                        <Award className="h-6 w-6 text-gold" />
+              {/* Elegant package cards with subtle patterns */}
+              <div className="grid grid-cols-2 gap-6">
+                {[
+                  { title: 'Corporate', icon: Users, image: '/src/assets/dish-1.jpg' },
+                  { title: 'Celebrations', icon: Calendar, image: '/src/assets/dish-2.jpg' },
+                  { title: 'Luxury Events', icon: Award, image: '/src/assets/dish-3.jpg' },
+                  { title: 'Private Dining', icon: Users, image: '/src/assets/hero-food.jpg' }
+                ].map((item, idx) => (
+                  <Card key={idx} className="aspect-square bg-card/90 backdrop-blur-sm border-gold/20 hover-lift shadow-elegant overflow-hidden relative group">
+                    {/* Background pattern */}
+                    <div className="absolute inset-0 card-pattern opacity-50" />
+                    {/* Image overlay */}
+                    <div 
+                      className="absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity duration-500"
+                      style={{ backgroundImage: `url('${item.image}')` }}
+                    />
+                    <CardContent className="relative z-10 h-full flex flex-col items-center justify-center p-6 text-center">
+                      <div className="w-16 h-16 bg-gradient-to-br from-gold/20 to-primary/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <item.icon className="h-8 w-8 text-gold" />
                       </div>
-                      <p className="text-sm text-muted-foreground">Package {item}</p>
-                    </div>
-                  </div>
+                      <h5 className="text-lg font-semibold text-foreground">{item.title}</h5>
+                    </CardContent>
+                  </Card>
                 ))}
               </div>
             </div>

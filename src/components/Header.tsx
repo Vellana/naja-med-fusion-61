@@ -30,12 +30,14 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="text-2xl font-bold text-primary">
-              NAJA
-            </div>
-            <div className="text-sm text-muted-foreground hidden sm:block border-l border-border pl-3">
-              Mediterranean American
+          <div className="flex items-center space-x-4">
+            <div className="flex flex-col">
+              <div className="text-3xl font-bold text-primary tracking-wider">
+                NAJA
+              </div>
+              <div className="text-xs text-gold hidden sm:block tracking-widest uppercase">
+                Mediterranean American
+              </div>
             </div>
           </div>
 

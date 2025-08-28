@@ -47,25 +47,28 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="py-20 bg-navy text-navy-foreground relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 hero-pattern-small opacity-5" />
+    <section className="py-24 bg-secondary/20 relative">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 section-divider-pattern" />
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-16">
             {/* Newsletter Section */}
             <div className="animate-fade-in-left">
-              <Card className="bg-card/95 backdrop-blur-sm border-gold/20 shadow-elegant">
-                <CardContent className="p-8">
-                  <div className="text-center mb-8">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-gold rounded-full mb-4">
-                      <Mail className="h-8 w-8 text-navy" />
+              <Card className="bg-card/80 backdrop-blur-sm border border-border/30 shadow-soft overflow-hidden">
+                {/* Card pattern */}
+                <div className="absolute inset-0 card-pattern opacity-20" />
+                
+                <CardContent className="p-10 relative z-10">
+                  <div className="mb-10">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full mb-6">
+                      <Mail className="h-8 w-8 text-primary" />
                     </div>
-                    <h3 className="text-3xl font-bold text-foreground mb-4">Stay Connected</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Subscribe to our newsletter for exclusive Mediterranean-American culinary updates, seasonal menu previews, and special event invitations
-                </p>
+                    <h3 className="text-3xl font-light text-foreground mb-6">Join Our Culinary Journey</h3>
+                    <p className="text-muted-foreground leading-relaxed font-light">
+                      Discover Mediterranean traditions meeting American innovation—receive updates on seasonal menus, exclusive events, and culinary experiences
+                    </p>
                   </div>
 
                   {!isSubscribed ? (
@@ -95,17 +98,17 @@ const Newsletter = () => {
                   )}
 
                   {/* Newsletter Benefits */}
-                  <div className="mt-8 pt-6 border-t border-border">
-                    <h4 className="font-semibold text-foreground mb-4">What you'll receive:</h4>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
+                  <div className="mt-10 pt-8 border-t border-border/30">
+                    <h4 className="font-medium text-foreground mb-6">Mediterranean American Insider Access:</h4>
+                    <ul className="space-y-3 text-sm text-muted-foreground">
                       {[
-                        "Exclusive Mediterranean-American fusion recipes",
-                        "First access to seasonal menu items",
-                        "Chef's wine and cocktail pairings",
-                        "Priority booking for special events"
+                        "Seasonal Mediterranean fusion menu previews",
+                        "Chef's authentic recipes and American innovations", 
+                        "Wine and cocktail pairing recommendations",
+                        "Exclusive event invitations and culinary experiences"
                       ].map((benefit, index) => (
                         <li key={index} className="flex items-center">
-                          <div className="w-2 h-2 bg-gold rounded-full mr-3 flex-shrink-0"></div>
+                          <div className="w-2 h-2 bg-gradient-to-r from-primary to-accent rounded-full mr-3 flex-shrink-0"></div>
                           {benefit}
                         </li>
                       ))}
@@ -117,12 +120,15 @@ const Newsletter = () => {
 
             {/* Contact Form Section */}
             <div className="animate-fade-in-right">
-              <Card className="bg-card/95 backdrop-blur-sm border-gold/20 shadow-elegant">
-                <CardContent className="p-8">
-                  <div className="text-center mb-8">
-                    <h3 className="text-3xl font-bold text-foreground mb-4">Get in Touch</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Have questions or special requests? We'd love to hear from you
+              <Card className="bg-card/80 backdrop-blur-sm border border-border/30 shadow-soft overflow-hidden">
+                {/* Card pattern */}
+                <div className="absolute inset-0 card-pattern opacity-20" />
+                
+                <CardContent className="p-10 relative z-10">
+                  <div className="mb-10">
+                    <h3 className="text-3xl font-light text-foreground mb-6">Connect with NAJA</h3>
+                    <p className="text-muted-foreground leading-relaxed font-light">
+                      Questions about our Mediterranean American cuisine? Planning a special event? We'd love to hear from you
                     </p>
                   </div>
 

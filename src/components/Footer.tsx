@@ -19,26 +19,29 @@ const Footer = () => {
 
   return (
     <footer className="bg-navy text-navy-foreground relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 hero-pattern-small opacity-5" />
+      {/* Subtle Background Pattern */}
+      <div className="absolute inset-0 card-pattern" />
       
       <div className="relative z-10">
         {/* Main Footer Content */}
-        <div className="container mx-auto px-4 py-16">
+        <div className="container mx-auto px-6 py-20">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* Brand & Description */}
-              <div className="lg:col-span-2">
-                <div className="mb-6">
-                  <h3 className="text-3xl font-bold mb-2">
-                    <span className="bg-gradient-gold bg-clip-text text-transparent">NAJA</span>
-                  </h3>
-                  <p className="text-gold text-sm mb-4">Mediterranean American</p>
-                  <p className="text-navy-foreground/80 leading-relaxed max-w-md">
-                    Experience the perfect fusion of Mediterranean traditions and American culinary innovation. 
-                    Every dish tells a story of heritage, creativity, and exceptional taste.
-                  </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+              {/* Brand Section */}
+              <div className="lg:col-span-2 animate-fade-in-up">
+                <div className="flex items-center space-x-4 mb-8">
+                  <div className="flex flex-col">
+                    <div className="text-4xl font-light text-navy-foreground tracking-wider">
+                      NAJA
+                    </div>
+                    <div className="text-sm text-gold tracking-widest uppercase font-light">
+                      Mediterranean American
+                    </div>
+                  </div>
                 </div>
+                <p className="text-navy-foreground/80 leading-relaxed max-w-lg font-light text-lg mb-8">
+                  Where Mediterranean heritage meets American innovation—creating exceptional culinary experiences that honor tradition while embracing creativity.
+                </p>
                 
                 {/* Social Links */}
                 <div className="flex space-x-4">
