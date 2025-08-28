@@ -1,27 +1,31 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Heart, Globe, Users } from 'lucide-react';
+import interiorImage from '@/assets/restaurant-interior.jpg';
 
 const About = () => {
   const values = [
     {
       icon: Heart,
-      title: "Passion",
-      description: "Every dish is crafted with love and dedication to our Mediterranean American heritage"
+      title: "Mediterranean Soul",
+      description: "Honoring centuries-old recipes and techniques passed down through generations of Mediterranean families"
     },
     {
       icon: Globe,
-      title: "Heritage", 
-      description: "Celebrating the rich culinary traditions of the Mediterranean with American innovation"
+      title: "American Innovation", 
+      description: "Embracing bold creativity and modern culinary techniques that define contemporary American cuisine"
     },
     {
       icon: Users,
-      title: "Community",
-      description: "Creating memorable experiences that bring people together around exceptional food"
+      title: "Fusion Excellence",
+      description: "Creating harmonious marriages of flavors that celebrate both culinary traditions as one"
     }
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-elegant">
+    <section id="about" className="py-20 bg-gradient-elegant relative">
+      {/* Section Divider Pattern */}
+      <div className="absolute top-0 left-0 right-0 h-20 section-divider-pattern" />
+      
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -30,42 +34,47 @@ const About = () => {
               Our Story
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Born from a passion for Mediterranean flavors and American culinary creativity, 
-              NAJA represents the perfect fusion of tradition and innovation.
+              NAJA represents the beautiful marriage of Mediterranean heritage and American culinary artistry, 
+              creating an entirely new dining experience that honors both traditions.
             </p>
           </div>
 
           {/* Story Content */}
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
             <div className="animate-fade-in-left">
               <div className="prose prose-lg max-w-none">
+                <h3 className="text-2xl font-semibold text-foreground mb-6">
+                  Mediterranean Roots, American Dreams
+                </h3>
                 <p className="text-lg text-foreground leading-relaxed mb-6">
-                  NAJA was founded on the belief that great food transcends borders. Our culinary journey 
-                  began with a simple vision: to honor the time-tested traditions of Mediterranean cuisine 
-                  while embracing the bold, innovative spirit of American gastronomy.
+                  NAJA was born from our founder's journey between two worlds – the sun-soaked Mediterranean coastlines 
+                  where olive groves whisper ancient secrets, and the vibrant American culinary landscape where 
+                  innovation knows no bounds.
                 </p>
                 <p className="text-lg text-foreground leading-relaxed mb-6">
-                  Every ingredient is carefully sourced, every technique meticulously perfected, and 
-                  every dish thoughtfully composed to create an experience that celebrates both heritage 
-                  and innovation. Our kitchen is where ancient olive groves meet modern culinary artistry.
+                  Our kitchen is a bridge between cultures, where traditional Mediterranean ingredients like 
+                  hand-pressed olive oil, fresh herbs, and artisanal cheeses meet American techniques of 
+                  smoking, grilling, and creative presentation.
                 </p>
                 <p className="text-lg text-foreground leading-relaxed">
-                  From our signature mezze selections to our reimagined American classics with Mediterranean 
-                  flair, NAJA offers a dining experience that honors the past while embracing the future 
-                  of culinary excellence.
+                  Every dish tells a story of this beautiful fusion – from our signature lamb that combines 
+                  Mediterranean spices with American barbecue techniques, to our reinvented mezze towers 
+                  that honor tradition while embracing contemporary plating artistry.
                 </p>
               </div>
             </div>
             
             <div className="animate-fade-in-right">
               <div className="relative">
-                <div className="aspect-square bg-gradient-primary rounded-2xl shadow-elegant hover-lift">
-                  <div className="absolute inset-4 bg-secondary rounded-xl flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-6xl font-bold text-primary mb-2">2019</div>
-                      <div className="text-lg text-muted-foreground">Founded</div>
-                    </div>
-                  </div>
+                <img 
+                  src={interiorImage} 
+                  alt="NAJA Restaurant Interior" 
+                  className="rounded-2xl shadow-elegant hover-lift w-full h-96 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent rounded-2xl"></div>
+                <div className="absolute bottom-6 left-6 text-navy-foreground">
+                  <div className="text-3xl font-bold">2019</div>
+                  <div className="text-lg">Founded with Vision</div>
                 </div>
               </div>
             </div>
@@ -74,8 +83,9 @@ const About = () => {
           {/* Values Grid */}
           <div className="grid md:grid-cols-3 gap-8">
             {values.map((value, index) => (
-              <Card key={index} className="hover-lift animate-fade-in-up shadow-soft" style={{ animationDelay: `${index * 0.2}s` }}>
-                <CardContent className="p-8 text-center">
+              <Card key={index} className="hover-lift animate-fade-in-up shadow-soft hero-pattern-small relative overflow-hidden" style={{ animationDelay: `${index * 0.2}s` }}>
+                <div className="absolute inset-0 bg-card/95"></div>
+                <CardContent className="p-8 text-center relative z-10">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-primary rounded-full mb-6">
                     <value.icon className="h-8 w-8 text-primary-foreground" />
                   </div>
@@ -87,6 +97,9 @@ const About = () => {
           </div>
         </div>
       </div>
+      
+      {/* Bottom Section Divider Pattern */}
+      <div className="absolute bottom-0 left-0 right-0 h-20 section-divider-pattern transform rotate-180" />
     </section>
   );
 };

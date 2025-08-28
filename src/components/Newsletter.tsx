@@ -49,7 +49,7 @@ const Newsletter = () => {
   return (
     <section className="py-20 bg-navy text-navy-foreground relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 hero-pattern opacity-5" />
+      <div className="absolute inset-0 hero-pattern-small opacity-5" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -63,9 +63,9 @@ const Newsletter = () => {
                       <Mail className="h-8 w-8 text-navy" />
                     </div>
                     <h3 className="text-3xl font-bold text-foreground mb-4">Stay Connected</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Subscribe to our newsletter for exclusive offers, new menu updates, and special event invitations
-                    </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Subscribe to our newsletter for exclusive Mediterranean-American culinary updates, seasonal menu previews, and special event invitations
+                </p>
                   </div>
 
                   {!isSubscribed ? (
@@ -99,10 +99,10 @@ const Newsletter = () => {
                     <h4 className="font-semibold text-foreground mb-4">What you'll receive:</h4>
                     <ul className="space-y-2 text-sm text-muted-foreground">
                       {[
-                        "Exclusive member-only promotions",
-                        "First access to new menu items",
-                        "Special event invitations",
-                        "Chef's seasonal recommendations"
+                        "Exclusive Mediterranean-American fusion recipes",
+                        "First access to seasonal menu items",
+                        "Chef's wine and cocktail pairings",
+                        "Priority booking for special events"
                       ].map((benefit, index) => (
                         <li key={index} className="flex items-center">
                           <div className="w-2 h-2 bg-gold rounded-full mr-3 flex-shrink-0"></div>

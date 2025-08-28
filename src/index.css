@@ -18,10 +18,10 @@ All colors MUST be HSL.
     --popover: 45 25% 98%;
     --popover-foreground: 220 30% 15%;
 
-    /* NAJA Blue Primary */
-    --primary: 220 85% 45%;
+    /* NAJA Blue Primary - Official Brand Color */
+    --primary: 217 59% 37%; /* #274a90 */
     --primary-foreground: 45 40% 95%;
-    --primary-glow: 220 70% 60%;
+    --primary-glow: 217 45% 50%;
 
     /* Mediterranean Cream Secondary */
     --secondary: 45 35% 90%;
@@ -94,9 +94,9 @@ All colors MUST be HSL.
     --popover: 220 45% 12%;
     --popover-foreground: 45 30% 92%;
 
-    --primary: 220 75% 55%;
+    --primary: 217 55% 50%; /* Lighter NAJA blue for dark theme */
     --primary-foreground: 220 50% 8%;
-    --primary-glow: 220 60% 70%;
+    --primary-glow: 217 45% 65%;
 
     --secondary: 220 35% 18%;
     --secondary-foreground: 45 30% 92%;
@@ -148,10 +148,24 @@ All colors MUST be HSL.
 
 /* Custom NAJA Restaurant Styles */
 @layer components {
-  .hero-pattern {
-    background-image: url('./assets/diamond-pattern.png');
+  .hero-pattern-large {
+    background-image: url('./assets/diamond-pattern-large.png');
     background-repeat: repeat;
-    background-size: 200px 200px;
+    background-size: 400px 400px;
+    opacity: 0.15;
+  }
+
+  .hero-pattern-small {
+    background-image: url('./assets/diamond-pattern-small.png');
+    background-repeat: repeat;
+    background-size: 150px 150px;
+    opacity: 0.08;
+  }
+
+  .section-divider-pattern {
+    background-image: url('./assets/diamond-pattern-large.png');
+    background-repeat: repeat;
+    background-size: 300px 300px;
     opacity: 0.1;
   }
 

@@ -9,8 +9,8 @@ const Testimonials = () => {
     {
       id: 1,
       name: "Sarah Mitchell",
-      title: "Local Food Critic",
-      text: "NAJA has redefined Mediterranean American cuisine in our city. Every dish is a masterpiece that honors tradition while embracing innovation. The lamb is absolutely divine!",
+      title: "Food & Wine Magazine",
+      text: "NAJA has masterfully bridged the Mediterranean and American culinary worlds. Each dish is a testament to how traditional flavors can be elevated with contemporary American techniques. The lamb with pomegranate BBQ glaze is pure genius!",
       rating: 5
     },
     {
@@ -23,15 +23,15 @@ const Testimonials = () => {
     {
       id: 3,
       name: "Emma Thompson",
-      title: "Wedding Planner",
-      text: "NAJA's catering transformed our clients' wedding reception into something truly magical. The attention to detail and flavor profiles were absolutely perfect. Highly recommended!",
+      title: "Event Designer",
+      text: "NAJA's catering beautifully showcases their Mediterranean-American fusion concept. The presentation is stunning, and guests always rave about how the familiar American flavors are enhanced with Mediterranean sophistication. Absolutely exceptional!",
       rating: 5
     },
     {
       id: 4,
       name: "David Chen",
-      title: "Food Enthusiast",
-      text: "As someone who's traveled extensively through the Mediterranean, I can say NAJA captures the authentic spirit while adding a unique American twist. The mezze tower is a work of art!",
+      title: "Culinary Travel Blogger",
+      text: "Having experienced authentic Mediterranean cuisine across three continents, I can confidently say NAJA's interpretation is both respectful and revolutionary. They've created something entirely new while honoring the essence of both culinary traditions.",
       rating: 5
     }
   ];
@@ -45,8 +45,12 @@ const Testimonials = () => {
   }, [testimonials.length]);
 
   return (
-    <section className="py-20 bg-secondary/30">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-secondary/30 relative">
+      {/* Small Pattern Background */}
+      <div className="absolute inset-0 hero-pattern-small" />
+      <div className="absolute inset-0 bg-background/95" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in-up">

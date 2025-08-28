@@ -20,7 +20,7 @@ const Footer = () => {
   return (
     <footer className="bg-navy text-navy-foreground relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 hero-pattern opacity-5" />
+      <div className="absolute inset-0 hero-pattern-small opacity-5" />
       
       <div className="relative z-10">
         {/* Main Footer Content */}

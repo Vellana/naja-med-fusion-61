@@ -1,7 +1,7 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
-import MenuHighlights from '@/components/MenuHighlights';
+import MenuCategories from '@/components/MenuCategories';
 import Gallery from '@/components/Gallery';
 import Catering from '@/components/Catering';
 import Testimonials from '@/components/Testimonials';
@@ -15,7 +15,7 @@ const Index = () => {
       <Header />
       <Hero />
       <About />
-      <MenuHighlights />
+      <MenuCategories />
       <Gallery />
       <Catering />
       <Testimonials />

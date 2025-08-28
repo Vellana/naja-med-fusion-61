@@ -27,7 +27,7 @@ const Catering = () => {
   return (
     <section id="catering" className="py-20 bg-gradient-navy text-navy-foreground relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 hero-pattern opacity-5" />
+      <div className="absolute inset-0 hero-pattern-small opacity-5" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -74,16 +74,16 @@ const Catering = () => {
           {/* Package Showcase */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="animate-fade-in-left">
-              <h3 className="text-3xl font-bold text-navy-foreground mb-6">Signature Catering Packages</h3>
+              <h3 className="text-3xl font-bold text-navy-foreground mb-6">Signature Mediterranean-American Packages</h3>
               <div className="space-y-6">
                 <div className="border-l-4 border-gold pl-6">
-                  <h4 className="text-xl font-semibold text-navy-foreground mb-2">The Mediterranean Feast</h4>
-                  <p className="text-navy-foreground/80">Complete spread featuring our signature mezze, grilled specialties, and traditional desserts</p>
+                  <h4 className="text-xl font-semibold text-navy-foreground mb-2">The Mediterranean Heritage</h4>
+                  <p className="text-navy-foreground/80">Authentic Mediterranean mezze, grilled specialties, and traditional desserts with modern presentation</p>
                   <p className="text-gold font-medium mt-2">Starting at $45 per person</p>
                 </div>
                 <div className="border-l-4 border-gold pl-6">
-                  <h4 className="text-xl font-semibold text-navy-foreground mb-2">The Fusion Experience</h4>
-                  <p className="text-navy-foreground/80">Innovative Mediterranean American dishes that showcase our culinary creativity</p>
+                  <h4 className="text-xl font-semibold text-navy-foreground mb-2">The American Fusion</h4>
+                  <p className="text-navy-foreground/80">Innovative Mediterranean-American dishes that showcase our unique culinary creativity and bold flavor combinations</p>
                   <p className="text-gold font-medium mt-2">Starting at $55 per person</p>
                 </div>
                 <div className="border-l-4 border-gold pl-6">
