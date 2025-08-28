@@ -1,15 +1,12 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import heroImage from '@/assets/hero-food.jpg';
-
 const Hero = () => {
-  return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 parallax-bg"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
+      <div className="absolute inset-0 parallax-bg" style={{
+      backgroundImage: `url(${heroImage})`
+    }} />
       
       {/* Large Pattern Overlay */}
       <div className="absolute inset-0 hero-pattern-large" />
@@ -36,19 +33,12 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="bg-gradient-primary hover:bg-primary/90 text-primary-foreground shadow-elegant hover-lift group px-10 py-5 text-xl font-semibold"
-            >
+            <Button size="lg" className="bg-gradient-primary hover:bg-primary/90 text-primary-foreground shadow-elegant hover-lift group px-10 py-5 text-xl font-semibold">
               Reserve Now
               <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-1" />
             </Button>
             
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-2 border-gold text-gold hover:bg-gold hover:text-navy transition-all duration-300 px-10 py-5 text-xl font-semibold backdrop-blur-sm"
-            >
+            <Button size="lg" variant="outline" className="border-2 border-gold text-gold hover:bg-gold hover:text-navy transition-all duration-300 px-10 py-5 text-xl font-semibold backdrop-blur-sm">
               View Menu
             </Button>
           </div>
@@ -56,13 +46,9 @@ const Hero = () => {
         
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-gold rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-gold rounded-full mt-2 animate-pulse"></div>
-          </div>
+          
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
