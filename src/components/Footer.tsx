@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
+import najaLogo from '@/assets/naja-logo.png';
 
 const Footer = () => {
   const navigationLinks = [
@@ -29,15 +30,12 @@ const Footer = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
               {/* Brand Section */}
               <div className="lg:col-span-2 animate-fade-in-up">
-                <div className="flex items-center space-x-4 mb-8">
-                  <div className="flex flex-col">
-                    <div className="text-4xl font-light text-navy-foreground tracking-wider">
-                      NAJA
-                    </div>
-                    <div className="text-sm text-gold tracking-widest uppercase font-light">
-                      Mediterranean American
-                    </div>
-                  </div>
+                <div className="flex items-center mb-8">
+                  <img 
+                    src={najaLogo} 
+                    alt="NAJA Mediterranean" 
+                    className="h-16 w-auto filter brightness-0 invert"
+                  />
                 </div>
                 <p className="text-navy-foreground/80 leading-relaxed max-w-lg font-light text-lg mb-8">
                   Where Mediterranean heritage meets American innovation—creating exceptional culinary experiences that honor tradition while embracing creativity.
