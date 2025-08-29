@@ -33,7 +33,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/a8ba7788-a198-4180-a269-982da8c9cdab.png"
+              src="/lovable-uploads/608e426e-51bf-4175-bc39-50d2148f6b9d.png"
               alt="NAJA Mediterranean" 
               className="h-12 w-auto"
             />
@@ -84,7 +84,7 @@ const Header = () => {
             ))}
             <div className="px-4 pt-4 border-t border-border/20">
                   <img 
-                    src="/lovable-uploads/a8ba7788-a198-4180-a269-982da8c9cdab.png"
+                    src="/lovable-uploads/608e426e-51bf-4175-bc39-50d2148f6b9d.png"
                     alt="NAJA Mediterranean" 
                     className="h-8 w-auto mb-4"
                   />
