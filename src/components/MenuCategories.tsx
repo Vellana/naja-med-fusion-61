@@ -47,7 +47,7 @@ const MenuCategories = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 section-divider pb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 section-divider pb-4 font-cinzel">
               Menu Highlights
             </h2>
             <p className="text-xl text-navy-foreground/80 max-w-3xl mx-auto leading-relaxed">
@@ -70,7 +70,7 @@ const MenuCategories = () => {
                     <div className={`inline-flex items-center justify-center w-14 h-14 ${category.color} rounded-full`}>
                       <category.icon className="h-7 w-7 text-white" />
                     </div>
-                    <CardTitle className="text-2xl font-bold text-foreground">{category.title}</CardTitle>
+                    <CardTitle className="text-2xl font-bold text-foreground font-cinzel">{category.title}</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent className="relative z-10">
@@ -106,7 +106,7 @@ const MenuCategories = () => {
           <div className="text-center">
             <Card className="inline-block bg-card/95 backdrop-blur-sm border-gold/20 shadow-elegant">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-foreground mb-4">Ready to Experience NAJA?</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-4 font-cinzel">Ready to Experience NAJA?</h3>
                 <p className="text-muted-foreground mb-6 max-w-md">
                   Discover our complete menu featuring seasonal specialties and chef's recommendations
                 </p>

@@ -43,7 +43,7 @@ const Events = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in-up">
-            <h3 className="text-3xl md:text-4xl font-light text-foreground mb-6 section-divider pb-4">
+            <h3 className="text-3xl md:text-4xl font-light text-foreground mb-6 section-divider pb-4 font-cinzel">
               Regular Events & Experiences
             </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed font-light">

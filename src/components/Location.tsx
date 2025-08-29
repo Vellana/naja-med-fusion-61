@@ -34,7 +34,7 @@ const Location = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 section-divider pb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 section-divider pb-4 font-cinzel">
               Visit Us
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -51,7 +51,7 @@ const Location = () => {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
                       <MapPin className="h-16 w-16 text-primary mx-auto mb-4" />
-                      <h3 className="text-2xl font-bold text-foreground mb-2">Find Us Here</h3>
+                      <h3 className="text-2xl font-bold text-foreground mb-2 font-cinzel">Find Us Here</h3>
                       <p className="text-muted-foreground">Interactive map coming soon</p>
                     </div>
                   </div>

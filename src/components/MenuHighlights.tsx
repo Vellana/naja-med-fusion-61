@@ -56,7 +56,7 @@ const MenuHighlights = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 section-divider pb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 section-divider pb-4 font-cinzel">
               Menu Highlights
             </h2>
             <p className="text-xl text-navy-foreground/80 max-w-3xl mx-auto leading-relaxed">
@@ -98,7 +98,7 @@ const MenuHighlights = () => {
                               ))}
                             </div>
                             
-                            <h3 className="text-3xl font-bold text-foreground mb-4">{dish.name}</h3>
+                            <h3 className="text-3xl font-bold text-foreground mb-4 font-cinzel">{dish.name}</h3>
                             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">{dish.description}</p>
                             
                             <div className="flex items-center justify-between">

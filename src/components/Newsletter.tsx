@@ -65,7 +65,7 @@ const Newsletter = () => {
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full mb-6">
                       <Mail className="h-8 w-8 text-primary" />
                     </div>
-                    <h3 className="text-3xl font-light text-foreground mb-6">Join Our Culinary Journey</h3>
+                    <h3 className="text-3xl font-light text-foreground mb-6 font-cinzel">Join Our Culinary Journey</h3>
                     <p className="text-muted-foreground leading-relaxed font-light">
                       Discover Mediterranean traditions meeting American innovation—receive updates on seasonal menus, exclusive events, and culinary experiences
                     </p>
@@ -126,7 +126,7 @@ const Newsletter = () => {
                 
                 <CardContent className="p-10 relative z-10">
                   <div className="mb-10">
-                    <h3 className="text-3xl font-light text-foreground mb-6">Connect with NAJA</h3>
+                    <h3 className="text-3xl font-light text-foreground mb-6 font-cinzel">Connect with NAJA</h3>
                     <p className="text-muted-foreground leading-relaxed font-light">
                       Questions about our Mediterranean American cuisine? Planning a special event? We'd love to hear from you
                     </p>

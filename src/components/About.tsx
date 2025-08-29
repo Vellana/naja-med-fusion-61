@@ -30,7 +30,7 @@ const About = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 section-divider pb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 section-divider pb-4 font-cinzel">
               Our Story
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -43,7 +43,7 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
             <div className="animate-fade-in-left">
               <div className="prose prose-lg max-w-none">
-                <h3 className="text-2xl font-semibold text-foreground mb-6">
+                <h3 className="text-2xl font-semibold text-foreground mb-6 font-cinzel">
                   Mediterranean Roots, American Dreams
                 </h3>
                 <p className="text-lg text-foreground leading-relaxed mb-6">
@@ -89,7 +89,7 @@ const About = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-primary rounded-full mb-6">
                     <value.icon className="h-8 w-8 text-primary-foreground" />
                   </div>
-                  <h3 className="text-2xl font-semibold text-foreground mb-4">{value.title}</h3>
+                  <h3 className="text-2xl font-semibold text-foreground mb-4 font-cinzel">{value.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{value.description}</p>
                 </CardContent>
               </Card>

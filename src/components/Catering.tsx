@@ -33,7 +33,7 @@ const Catering = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 section-divider pb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 section-divider pb-4 font-cinzel">
               Catering & Private Events
             </h2>
             <p className="text-xl text-navy-foreground/80 max-w-3xl mx-auto leading-relaxed">
@@ -54,7 +54,7 @@ const Catering = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-gold rounded-full mb-4 mx-auto">
                     <service.icon className="h-8 w-8 text-navy" />
                   </div>
-                  <CardTitle className="text-2xl font-bold text-foreground">{service.title}</CardTitle>
+                  <CardTitle className="text-2xl font-bold text-foreground font-cinzel">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
@@ -74,23 +74,23 @@ const Catering = () => {
           {/* Package Showcase */}
           <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
             <div className="animate-fade-in-left space-y-8">
-              <h3 className="text-4xl font-light text-navy-foreground mb-8">Signature Catering Experiences</h3>
+              <h3 className="text-4xl font-light text-navy-foreground mb-8 font-cinzel">Signature Catering Experiences</h3>
               <div className="space-y-8">
                 <div className="relative pl-8">
                   <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-gold to-accent rounded-full"></div>
-                  <h4 className="text-2xl font-semibold text-navy-foreground mb-3">Mediterranean Heritage</h4>
+                  <h4 className="text-2xl font-semibold text-navy-foreground mb-3 font-cinzel">Mediterranean Heritage</h4>
                   <p className="text-navy-foreground/90 leading-relaxed mb-3">Traditional Mediterranean mezze, wood-fired specialties, and artisanal desserts reimagined with contemporary American techniques</p>
                   <p className="text-gold font-semibold text-lg">From $48 per guest</p>
                 </div>
                 <div className="relative pl-8">
                   <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-accent to-primary rounded-full"></div>
-                  <h4 className="text-2xl font-semibold text-navy-foreground mb-3">American Innovation</h4>
+                  <h4 className="text-2xl font-semibold text-navy-foreground mb-3 font-cinzel">American Innovation</h4>
                   <p className="text-navy-foreground/90 leading-relaxed mb-3">Bold Mediterranean-American fusion showcasing our signature dishes that bridge cultures and celebrate creativity</p>
                   <p className="text-gold font-semibold text-lg">From $62 per guest</p>
                 </div>
                 <div className="relative pl-8">
                   <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-primary to-gold rounded-full"></div>
-                  <h4 className="text-2xl font-semibold text-navy-foreground mb-3">Luxury Collection</h4>
+                  <h4 className="text-2xl font-semibold text-navy-foreground mb-3 font-cinzel">Luxury Collection</h4>
                   <p className="text-navy-foreground/90 leading-relaxed mb-3">Premium Mediterranean ingredients meet American culinary artistry with sommelier wine pairings and chef presentation</p>
                   <p className="text-gold font-semibold text-lg">From $85 per guest</p>
                 </div>
@@ -131,7 +131,7 @@ const Catering = () => {
             <Card className="inline-block bg-card/95 backdrop-blur-sm border-gold/20 shadow-elegant">
               <CardContent className="p-8">
                 <Phone className="h-12 w-12 text-gold mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-foreground mb-4">Ready to Plan Your Event?</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-4 font-cinzel">Ready to Plan Your Event?</h3>
                 <p className="text-muted-foreground mb-6 max-w-md">
                   Let our event specialists create a memorable experience tailored to your vision and budget
                 </p>

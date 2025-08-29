@@ -61,7 +61,7 @@ const Footer = () => {
 
               {/* Quick Links */}
               <div>
-                <h4 className="text-lg font-semibold text-navy-foreground mb-6">Quick Links</h4>
+                <h4 className="text-lg font-semibold text-navy-foreground mb-6 font-cinzel">Quick Links</h4>
                 <ul className="space-y-3">
                   {navigationLinks.map((link) => (
                     <li key={link.label}>
@@ -79,7 +79,7 @@ const Footer = () => {
 
               {/* Contact Info */}
               <div>
-                <h4 className="text-lg font-semibold text-navy-foreground mb-6">Contact</h4>
+                <h4 className="text-lg font-semibold text-navy-foreground mb-6 font-cinzel">Contact</h4>
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <MapPin className="h-5 w-5 text-gold mr-3 mt-0.5 flex-shrink-0" />
