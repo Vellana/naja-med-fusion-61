@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="relative z-10 text-center max-w-5xl mx-auto px-4">
         <div className="animate-fade-in-up">
           <h1 className="text-6xl md:text-8xl font-bold text-navy-foreground mb-6 elegant-text-shadow">
-            Experience
+            <span className="font-cinzel font-normal">Experience</span>
             <img 
               src="/lovable-uploads/c584bab9-b638-441a-89d1-5777ec451ac3.png" 
               alt="NAJA" 
