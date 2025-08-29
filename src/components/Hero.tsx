@@ -19,9 +19,11 @@ const Hero = () => {
         <div className="animate-fade-in-up">
           <h1 className="text-6xl md:text-8xl font-bold text-navy-foreground mb-6 elegant-text-shadow">
             Experience
-            <span className="block bg-gradient-gold bg-clip-text text-transparent">
-              NAJA
-            </span>
+            <img 
+              src="/lovable-uploads/c584bab9-b638-441a-89d1-5777ec451ac3.png" 
+              alt="NAJA" 
+              className="block h-24 md:h-32 w-auto mx-auto"
+            />
           </h1>
           
           <h2 className="text-2xl md:text-3xl text-navy-foreground/95 mb-8 max-w-3xl mx-auto leading-relaxed font-light">
