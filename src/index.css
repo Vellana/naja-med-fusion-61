@@ -9,13 +9,13 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* NAJA Mediterranean Restaurant Brand Colors */
-    --background: 45 25% 96%;
+    --background: 45 54% 93%; /* NAJA Cream */
     --foreground: 220 30% 15%;
 
-    --card: 45 25% 98%;
+    --card: 45 54% 95%; /* Slightly lighter NAJA Cream for cards */
     --card-foreground: 220 30% 15%;
 
-    --popover: 45 25% 98%;
+    --popover: 45 54% 95%; /* NAJA Cream for popovers */
     --popover-foreground: 220 30% 15%;
 
     /* NAJA Blue Primary - Updated Brand Color */
