@@ -43,9 +43,9 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
             <div className="animate-fade-in-left">
               <div className="prose prose-lg max-w-none">
-                <h3 className="text-2xl font-semibold text-foreground mb-6 font-cinzel">
-                  Mediterranean Roots, American Dreams
-                </h3>
+            <h3 className="text-2xl font-semibold text-foreground mb-6 font-cinzel text-center">
+              Mediterranean Roots, American Dreams
+            </h3>
                 <p className="text-lg text-foreground leading-relaxed mb-6">
                   NAJA was born from our founder's journey between two worlds – the sun-soaked Mediterranean coastlines 
                   where olive groves whisper ancient secrets, and the vibrant American culinary landscape where 
