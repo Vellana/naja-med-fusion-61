@@ -32,12 +32,12 @@ const Footer = () => {
               <div className="lg:col-span-2 animate-fade-in-up">
                 <div className="flex items-center mb-8">
                   <img 
-                    src="/lovable-uploads/a8ba7788-a198-4180-a269-982da8c9cdab.png"
+                    src="/lovable-uploads/7b85a113-8dbb-48bf-82e0-f4d04d632d56.png"
                     alt="NAJA Mediterranean" 
-                    className="h-16 w-auto filter brightness-0 invert"
+                    className="h-16 w-auto"
                   />
                 </div>
-                <p className="text-navy-foreground/80 leading-relaxed max-w-lg font-light text-lg mb-8">
+                <p className="text-cream/80 leading-relaxed max-w-lg font-light text-lg mb-8">
                   Where Mediterranean heritage meets American innovation—creating exceptional culinary experiences that honor tradition while embracing creativity.
                 </p>
                 
@@ -61,13 +61,13 @@ const Footer = () => {
 
               {/* Quick Links */}
               <div>
-                <h4 className="text-lg font-semibold text-navy-foreground mb-6 font-cinzel">Quick Links</h4>
+                <h4 className="text-lg font-semibold text-cream mb-6 font-cinzel">Quick Links</h4>
                 <ul className="space-y-3">
                   {navigationLinks.map((link) => (
                     <li key={link.label}>
                       <a 
                         href={link.href}
-                        className="text-navy-foreground/80 hover:text-gold transition-colors duration-300 relative group"
+                        className="text-cream/80 hover:text-gold transition-colors duration-300 relative group"
                       >
                         {link.label}
                         <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
@@ -79,30 +79,30 @@ const Footer = () => {
 
               {/* Contact Info */}
               <div>
-                <h4 className="text-lg font-semibold text-navy-foreground mb-6 font-cinzel">Contact</h4>
+                <h4 className="text-lg font-semibold text-cream mb-6 font-cinzel">Contact</h4>
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <MapPin className="h-5 w-5 text-gold mr-3 mt-0.5 flex-shrink-0" />
-                    <div className="text-navy-foreground/80 text-sm">
+                    <div className="text-cream/80 text-sm">
                       <div>2911 District Ave</div>
                       <div>Fairfax, VA 22031</div>
                     </div>
                   </li>
                   <li className="flex items-center">
                     <Phone className="h-5 w-5 text-gold mr-3 flex-shrink-0" />
-                    <div className="text-navy-foreground/80 text-sm">
+                    <div className="text-cream/80 text-sm">
                       <div>(571) 430-3650</div>
                     </div>
                   </li>
                   <li className="flex items-center">
                     <Mail className="h-5 w-5 text-gold mr-3 flex-shrink-0" />
-                    <div className="text-navy-foreground/80 text-sm">
+                    <div className="text-cream/80 text-sm">
                       <div>info@naja.com</div>
                     </div>
                   </li>
                   <li className="flex items-start">
                     <Clock className="h-5 w-5 text-gold mr-3 mt-0.5 flex-shrink-0" />
-                    <div className="text-navy-foreground/80 text-sm">
+                    <div className="text-cream/80 text-sm">
                       <div>Wed-Thu: 5-10 PM</div>
                       <div>Fri-Sat: 5-11 PM</div>
                       <div>Sun: 4-9 PM</div>
@@ -120,26 +120,26 @@ const Footer = () => {
           <div className="container mx-auto px-4 py-6">
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                <div className="text-navy-foreground/60 text-sm">
+                <div className="text-cream/60 text-sm">
                   © 2024 NAJA Mediterranean American. All rights reserved.
                 </div>
                 
                 <div className="flex space-x-6 text-sm">
                   <a 
                     href="#" 
-                    className="text-navy-foreground/60 hover:text-gold transition-colors duration-300"
+                    className="text-cream/60 hover:text-gold transition-colors duration-300"
                   >
                     Privacy Policy
                   </a>
                   <a 
                     href="#" 
-                    className="text-navy-foreground/60 hover:text-gold transition-colors duration-300"
+                    className="text-cream/60 hover:text-gold transition-colors duration-300"
                   >
                     Terms of Service
                   </a>
                   <a 
                     href="#" 
-                    className="text-navy-foreground/60 hover:text-gold transition-colors duration-300"
+                    className="text-cream/60 hover:text-gold transition-colors duration-300"
                   >
                     Accessibility
                   </a>
