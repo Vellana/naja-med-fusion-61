@@ -215,6 +215,12 @@ All colors MUST be HSL.
     height: 2px;
     background: var(--gradient-gold);
   }
+
+  .diamond-pattern {
+    background-image: url('/lovable-uploads/f19ba275-39d0-4473-941e-58fa246dc2f2.png');
+    background-repeat: repeat;
+    background-size: 200px 200px;
+  }
 }
 
 /* Animations */

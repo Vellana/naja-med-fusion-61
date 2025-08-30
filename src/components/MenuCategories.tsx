@@ -61,7 +61,7 @@ const MenuCategories = () => {
             {categories.map((category, index) => (
               <Card 
                 key={category.id} 
-                className="bg-card/95 backdrop-blur-sm border-gold/20 shadow-elegant hover-lift animate-fade-in-up hero-pattern-small relative overflow-hidden"
+                className="bg-card/95 backdrop-blur-sm border-gold/20 shadow-elegant hover-lift animate-fade-in-up diamond-pattern relative overflow-hidden"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="absolute inset-0 bg-card/98"></div>
