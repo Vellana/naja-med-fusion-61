@@ -118,11 +118,14 @@ const MenuCategories = () => {
                     View Full Menu
                   </Button>
                   <Button 
+                    asChild
                     size="lg"
                     variant="outline" 
                     className="border-gold text-gold hover:bg-gold hover:text-navy px-8 py-4 text-lg font-semibold"
                   >
-                    Make Reservation
+                    <a href="https://www.opentable.com/r/kirby-club-fairfax" target="_blank" rel="noopener noreferrer">
+                      Make Reservation
+                    </a>
                   </Button>
                 </div>
               </CardContent>
