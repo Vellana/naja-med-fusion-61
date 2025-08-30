@@ -72,52 +72,8 @@ const Location = () => {
               </Card>
             </div>
 
-            {/* Contact Information */}
+            {/* Map and Special Note Only */}
             <div className="space-y-8 animate-fade-in-right">
-              {/* Contact Details */}
-              <div className="grid gap-6">
-                {contactInfo.map((info, index) => (
-                  <Card key={index} className="shadow-soft hover-lift">
-                    <CardHeader className="pb-3">
-                      <CardTitle className="flex items-center text-lg">
-                        <div className="inline-flex items-center justify-center w-10 h-10 bg-gradient-primary rounded-full mr-3">
-                          <info.icon className="h-5 w-5 text-primary-foreground" />
-                        </div>
-                        {info.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="pt-0 pl-16">
-                      {info.details.map((detail, idx) => (
-                        <div key={idx} className="text-muted-foreground">{detail}</div>
-                      ))}
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-
-              {/* Hours */}
-              <Card className="shadow-soft hover-lift">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-lg">
-                    <div className="inline-flex items-center justify-center w-10 h-10 bg-gradient-primary rounded-full mr-3">
-                      <Clock className="h-5 w-5 text-primary-foreground" />
-                    </div>
-                    Hours of Operation
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="pl-16">
-                  <div className="space-y-2">
-                    {hours.map((schedule, index) => (
-                      <div key={index} className="flex justify-between items-center">
-                        <span className="text-foreground font-medium">{schedule.day}</span>
-                        <span className={`${schedule.time === 'Closed' ? 'text-muted-foreground' : 'text-primary font-medium'}`}>
-                          {schedule.time}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
 
               {/* Special Note */}
               <Card className="bg-gradient-elegant border-gold/20 shadow-soft">

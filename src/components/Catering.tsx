@@ -126,26 +126,6 @@ const Catering = () => {
             </div>
           </div>
 
-          {/* Contact CTA */}
-          <div className="text-center">
-            <Card className="inline-block bg-card/95 backdrop-blur-sm border-gold/20 shadow-elegant">
-              <CardContent className="p-8">
-                <Phone className="h-12 w-12 text-gold mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-foreground mb-4 font-cinzel">Ready to Plan Your Event?</h3>
-                <p className="text-muted-foreground mb-6 max-w-md">
-                  Let our event specialists create a memorable experience tailored to your vision and budget
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button className="bg-gradient-gold text-navy hover:bg-gold/90 shadow-gold">
-                    Request Quote
-                  </Button>
-                  <Button variant="outline" className="border-gold text-gold hover:bg-gold hover:text-navy">
-                    Schedule Consultation
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </div>
     </section>
