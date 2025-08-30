@@ -104,35 +104,6 @@ const MenuCategories = () => {
             ))}
           </div>
 
-          {/* Full Menu CTA */}
-          <div className="text-center">
-            <Card className="inline-block bg-card/95 backdrop-blur-sm border-gold/20 shadow-elegant">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-foreground mb-4 font-cinzel">Ready to Experience NAJA?</h3>
-                <p className="text-muted-foreground mb-6 max-w-md">
-                  Discover our complete menu featuring seasonal specialties and chef's recommendations
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button 
-                    size="lg" 
-                    className="bg-gradient-gold text-navy hover:bg-gold/90 shadow-gold px-8 py-4 text-lg font-semibold"
-                  >
-                    View Full Menu
-                  </Button>
-                  <Button 
-                    asChild
-                    size="lg"
-                    variant="outline" 
-                    className="border-gold text-gold hover:bg-gold hover:text-navy px-8 py-4 text-lg font-semibold"
-                  >
-                    <a href="https://www.opentable.com/r/kirby-club-fairfax" target="_blank" rel="noopener noreferrer">
-                      Make Reservation
-                    </a>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </div>
     </section>
