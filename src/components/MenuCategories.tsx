@@ -64,7 +64,9 @@ const MenuCategories = () => {
                 className="bg-card/80 backdrop-blur-sm border-gold/30 shadow-elegant hover-lift animate-fade-in-up diamond-pattern relative overflow-hidden"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="absolute inset-0 bg-card/70 backdrop-blur-sm"></div>
+                {/* Faded overlay for text legibility */}
+                <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/60 to-navy/40 backdrop-blur-sm"></div>
+                <div className="absolute inset-0 bg-card/30"></div>
                 <CardHeader className="relative z-10">
                   <div className="flex items-center gap-4 mb-4">
                     <div className={`inline-flex items-center justify-center w-14 h-14 ${category.color} rounded-full shadow-lg`}>
