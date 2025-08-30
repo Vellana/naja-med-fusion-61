@@ -61,26 +61,26 @@ const MenuCategories = () => {
             {categories.map((category, index) => (
               <Card 
                 key={category.id} 
-                className="bg-card/95 backdrop-blur-sm border-gold/20 shadow-elegant hover-lift animate-fade-in-up diamond-pattern relative overflow-hidden"
+                className="bg-card/80 backdrop-blur-sm border-gold/30 shadow-elegant hover-lift animate-fade-in-up diamond-pattern relative overflow-hidden"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="absolute inset-0 bg-card/98"></div>
+                <div className="absolute inset-0 bg-card/70 backdrop-blur-sm"></div>
                 <CardHeader className="relative z-10">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className={`inline-flex items-center justify-center w-14 h-14 ${category.color} rounded-full`}>
+                    <div className={`inline-flex items-center justify-center w-14 h-14 ${category.color} rounded-full shadow-lg`}>
                       <category.icon className="h-7 w-7 text-white" />
                     </div>
-                    <CardTitle className="text-2xl font-bold text-foreground font-cinzel">{category.title}</CardTitle>
+                    <CardTitle className="text-2xl font-bold text-foreground font-cinzel drop-shadow-sm">{category.title}</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent className="relative z-10">
-                  <p className="text-muted-foreground mb-6 leading-relaxed text-base">
+                  <p className="text-muted-foreground mb-6 leading-relaxed text-base drop-shadow-sm">
                     {category.description}
                   </p>
                   
                   {/* Highlights */}
                   <div className="mb-6">
-                    <h4 className="font-semibold text-foreground mb-3">Featured Dishes:</h4>
+                    <h4 className="font-semibold text-foreground mb-3 drop-shadow-sm">Featured Dishes:</h4>
                     <div className="space-y-2">
                       {category.highlights.map((highlight, idx) => (
                         <div key={idx} className="flex items-center text-sm text-muted-foreground">
