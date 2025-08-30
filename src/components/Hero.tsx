@@ -35,9 +35,11 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button size="lg" className="bg-gradient-primary hover:bg-primary/90 text-primary-foreground shadow-elegant hover-lift group px-10 py-5 text-xl font-semibold">
-              Reserve Now
-              <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-1" />
+            <Button asChild size="lg" className="bg-gradient-primary hover:bg-primary/90 text-primary-foreground shadow-elegant hover-lift group px-10 py-5 text-xl font-semibold">
+              <a href="https://www.opentable.com/r/kirby-club-fairfax" target="_blank" rel="noopener noreferrer">
+                Reserve Now
+                <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-1" />
+              </a>
             </Button>
             
             <Button size="lg" variant="outline" className="border-2 border-gold text-gold hover:bg-gold hover:text-navy transition-all duration-300 px-10 py-5 text-xl font-semibold backdrop-blur-sm">

@@ -55,8 +55,10 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="bg-gradient-primary hover:bg-primary/90 text-primary-foreground shadow-elegant">
-              Reserve Now
+            <Button asChild className="bg-gradient-primary hover:bg-primary/90 text-primary-foreground shadow-elegant">
+              <a href="https://www.opentable.com/r/kirby-club-fairfax" target="_blank" rel="noopener noreferrer">
+                Reserve Now
+              </a>
             </Button>
           </div>
 
@@ -88,8 +90,10 @@ const Header = () => {
                     alt="NAJA Mediterranean" 
                     className="h-8 w-auto mb-4"
                   />
-              <Button className="w-full bg-gradient-primary hover:bg-primary/90 text-primary-foreground">
-                Reserve Now
+              <Button asChild className="w-full bg-gradient-primary hover:bg-primary/90 text-primary-foreground">
+                <a href="https://www.opentable.com/r/kirby-club-fairfax" target="_blank" rel="noopener noreferrer">
+                  Reserve Now
+                </a>
               </Button>
             </div>
           </div>
