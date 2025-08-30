@@ -7,12 +7,12 @@ const Location = () => {
     {
       icon: MapPin,
       title: "Address",
-      details: ["123 Mediterranean Avenue", "Downtown District", "City, State 12345"]
+      details: ["2911 District Ave", "Fairfax, VA 22031"]
     },
     {
       icon: Phone,
       title: "Phone",
-      details: ["(555) 123-NAJA", "(555) 123-6252"]
+      details: ["(571) 430-3650"]
     },
     {
       icon: Mail,
@@ -60,7 +60,7 @@ const Location = () => {
                   <div className="absolute bottom-0 left-0 right-0 bg-navy/90 text-navy-foreground p-4">
                     <div className="flex items-center">
                       <Navigation className="h-5 w-5 mr-2" />
-                      <span className="font-semibold">123 Mediterranean Avenue, Downtown District</span>
+                      <span className="font-semibold">2911 District Ave, Fairfax, VA 22031</span>
                     </div>
                   </div>
                 </div>

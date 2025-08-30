@@ -84,15 +84,14 @@ const Footer = () => {
                   <li className="flex items-start">
                     <MapPin className="h-5 w-5 text-gold mr-3 mt-0.5 flex-shrink-0" />
                     <div className="text-navy-foreground/80 text-sm">
-                      <div>123 Mediterranean Avenue</div>
-                      <div>Downtown District</div>
-                      <div>City, State 12345</div>
+                      <div>2911 District Ave</div>
+                      <div>Fairfax, VA 22031</div>
                     </div>
                   </li>
                   <li className="flex items-center">
                     <Phone className="h-5 w-5 text-gold mr-3 flex-shrink-0" />
                     <div className="text-navy-foreground/80 text-sm">
-                      <div>(555) 123-NAJA</div>
+                      <div>(571) 430-3650</div>
                     </div>
                   </li>
                   <li className="flex items-center">
