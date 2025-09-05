@@ -99,11 +99,11 @@ const Newsletter = () => {
 
                   {/* Newsletter Benefits */}
                   <div className="mt-10 pt-8 border-t border-border/30">
-                    <h4 className="font-medium text-foreground mb-6">Mediterranean American Insider Access:</h4>
+                    <h4 className="font-medium text-foreground mb-6">Mediterranean Fusion Insider Access:</h4>
                     <ul className="space-y-3 text-sm text-muted-foreground">
                       {[
                         "Seasonal Mediterranean fusion menu previews",
-                        "Chef's authentic recipes and American innovations", 
+                        "Tariq Alaeddin's visionary creations and American innovations", 
                         "Wine and cocktail pairing recommendations",
                         "Exclusive event invitations and culinary experiences"
                       ].map((benefit, index) => (
@@ -128,7 +128,7 @@ const Newsletter = () => {
                   <div className="mb-10">
                     <h3 className="text-3xl font-light text-foreground mb-6 font-cinzel">Connect with NAJA</h3>
                     <p className="text-muted-foreground leading-relaxed font-light">
-                      Questions about our Mediterranean American cuisine? Planning a special event? We'd love to hear from you
+                      Questions about our Mediterranean fusion cuisine? Plan your celebration and ask us anything below.
                     </p>
                   </div>
 

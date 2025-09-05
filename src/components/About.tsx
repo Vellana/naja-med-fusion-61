@@ -34,7 +34,7 @@ const About = () => {
               Our Story
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              NAJA represents the beautiful marriage of Mediterranean heritage and American culinary artistry, 
+              Behind NAJA is Tariq Alaeddin, a visionary who masterfully blends his Mediterranean heritage with American culture, 
               creating an entirely new dining experience that honors both traditions.
             </p>
           </div>
@@ -44,22 +44,22 @@ const About = () => {
             <div className="animate-fade-in-left">
               <div className="prose prose-lg max-w-none">
             <h3 className="text-2xl font-semibold text-foreground mb-6 font-cinzel text-center">
-              Mediterranean Roots, American Dreams
+              The Visionary Behind NAJA
             </h3>
                 <p className="text-lg text-foreground leading-relaxed mb-6">
-                  NAJA was born from our founder's journey between two worlds – the sun-soaked Mediterranean coastlines 
-                  where olive groves whisper ancient secrets, and the vibrant American culinary landscape where 
-                  innovation knows no bounds.
+                  Tariq Alaeddin envisioned NAJA as more than a restaurant—it's a cultural bridge between two worlds. 
+                  Born from his deep Mediterranean heritage and shaped by his American experience, Tariq saw an opportunity 
+                  to create something entirely new in the culinary landscape.
                 </p>
                 <p className="text-lg text-foreground leading-relaxed mb-6">
-                  Our kitchen is a bridge between cultures, where traditional Mediterranean ingredients like 
-                  hand-pressed olive oil, fresh herbs, and artisanal cheeses meet American techniques of 
-                  smoking, grilling, and creative presentation.
+                  Drawing from childhood memories of family gatherings around tables laden with traditional mezze and 
+                  the innovative spirit of American dining culture, Tariq created NAJA as a place where these two 
+                  rich traditions could coexist and enhance each other.
                 </p>
                 <p className="text-lg text-foreground leading-relaxed">
-                  Every dish tells a story of this beautiful fusion – from our signature lamb that combines 
-                  Mediterranean spices with American barbecue techniques, to our reinvented mezze towers 
-                  that honor tradition while embracing contemporary plating artistry.
+                  His vision goes beyond fusion cuisine—it's about creating a space where cultures connect, where 
+                  the warmth of Mediterranean hospitality meets American creativity, and where every guest becomes 
+                  part of this beautiful culinary story.
                 </p>
               </div>
             </div>

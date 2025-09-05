@@ -15,7 +15,7 @@ const MenuCategories = () => {
     {
       id: 2,
       icon: Star,
-      title: "American Classics with a Twist",
+      title: "American Classics with a Mediterranean Twist",
       description: "Beloved American dishes elevated with Mediterranean ingredients - think truffle mac & cheese with feta, or BBQ ribs with pomegranate molasses glaze.",
       highlights: ["Mediterranean Burger", "Feta Mac & Cheese", "Pomegranate BBQ Ribs"],
       color: "bg-gradient-gold"
