@@ -20,7 +20,7 @@ const Hero = () => {
           <h1 className="text-6xl md:text-8xl font-bold text-navy-foreground mb-6 elegant-text-shadow">
             <span className="font-cinzel font-normal">Experience</span>
             <img 
-              src="/lovable-uploads/c14e20a9-c383-4382-90f9-bf0dd7309d3c.png" 
+              src="/lovable-uploads/11cd3668-92c0-4465-bf40-80761b6abb85.png" 
               alt="NAJA" 
               className="block h-24 md:h-32 w-auto mx-auto"
             />
