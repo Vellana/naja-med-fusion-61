@@ -72,20 +72,20 @@ const MenuCategories = () => {
                     <div className={`inline-flex items-center justify-center w-14 h-14 ${category.color} rounded-full shadow-lg`}>
                       <category.icon className="h-7 w-7 text-white" />
                     </div>
-                    <CardTitle className="text-2xl font-bold text-foreground font-cinzel drop-shadow-sm">{category.title}</CardTitle>
+                    <CardTitle className="text-2xl font-bold text-black font-cinzel drop-shadow-sm">{category.title}</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent className="relative z-10">
-                  <p className="text-muted-foreground mb-6 leading-relaxed text-base drop-shadow-sm">
+                  <p className="text-black mb-6 leading-relaxed text-base drop-shadow-sm">
                     {category.description}
                   </p>
                   
                   {/* Highlights */}
                   <div className="mb-6">
-                    <h4 className="font-semibold text-foreground mb-3 drop-shadow-sm">Featured Dishes:</h4>
+                    <h4 className="font-semibold text-black mb-3 drop-shadow-sm">Featured Dishes:</h4>
                     <div className="space-y-2">
                       {category.highlights.map((highlight, idx) => (
-                        <div key={idx} className="flex items-center text-sm text-muted-foreground">
+                        <div key={idx} className="flex items-center text-sm text-black">
                           <div className="w-2 h-2 bg-gold rounded-full mr-3 flex-shrink-0"></div>
                           {highlight}
                         </div>
