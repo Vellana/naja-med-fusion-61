@@ -22,7 +22,7 @@ const Hero = () => {
           {/* Logo */}
           <div className="mb-3 relative">
             {/* Overlaid Experience text above logo */}
-            <div className="absolute top-[25%] left-1/2 transform -translate-x-1/2 w-full z-20">
+<div className="absolute top-[15%] left-1/2 transform -translate-x-1/2 w-full z-20">
               <h1 className="text-6xl md:text-8xl font-bold text-navy-foreground mb-6 elegant-text-shadow">
                 <span className="font-cinzel font-normal">Experience</span>
               </h1>
