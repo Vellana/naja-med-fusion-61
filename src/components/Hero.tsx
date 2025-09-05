@@ -19,12 +19,15 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center max-w-5xl mx-auto px-4">
         <div className="animate-fade-in-up">
-          <h1 className="text-6xl md:text-8xl font-bold text-navy-foreground mb-6 elegant-text-shadow relative z-20">
-            <span className="font-cinzel font-normal">Experience</span>
-          </h1>
-          
           {/* Logo */}
           <div className="mb-3 relative">
+            {/* Overlaid Experience text above logo */}
+            <div className="absolute top-[35%] left-1/2 transform -translate-x-1/2 w-full z-20">
+              <h1 className="text-6xl md:text-8xl font-bold text-navy-foreground mb-6 elegant-text-shadow">
+                <span className="font-cinzel font-normal">Experience</span>
+              </h1>
+            </div>
+            
             <img 
               src="/lovable-uploads/018b221c-9c10-4dfe-ac56-c8bf8167258b.png" 
               alt="NAJA" 
