@@ -22,7 +22,7 @@ const Hero = () => {
           </h1>
           
           {/* Logo */}
-          <div className="mb-8">
+          <div className="mb-3">
             <img 
               src="/lovable-uploads/018b221c-9c10-4dfe-ac56-c8bf8167258b.png" 
               alt="NAJA" 
