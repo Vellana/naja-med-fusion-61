@@ -38,7 +38,7 @@ const Location = () => {
               Visit Us
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Experience NAJA in the heart of the city. We look forward to welcoming you to our Mediterranean fusion sanctuary, blending flavors from the Levant with American innovation.
+              Experience NAJA in the heart of the city. We look forward to welcoming you to our Mediterranean fusion sanctuary.
             </p>
           </div>
 
