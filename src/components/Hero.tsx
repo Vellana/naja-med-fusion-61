@@ -25,7 +25,7 @@ const Hero = () => {
             <img 
               src="/lovable-uploads/11cd3668-92c0-4465-bf40-80761b6abb85.png" 
               alt="NAJA" 
-              className="block h-80 md:h-80 w-auto mx-auto relative z-0"
+              className="block h-80 w-56 mx-auto relative z-0 object-cover"
             />
           </div>
           
