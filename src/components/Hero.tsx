@@ -18,13 +18,16 @@ const Hero = () => {
       <div className="relative z-10 text-center max-w-5xl mx-auto px-4">
         <div className="animate-fade-in-up">
           <h1 className="text-6xl md:text-8xl font-bold text-navy-foreground mb-6 elegant-text-shadow">
-            <span className="font-cinzel font-normal">Experience</span>
+            <span className="font-cinzel font-normal relative z-10">Experience</span>
+          </h1>
+          
+          <div className="relative -mt-4 mb-8">
             <img 
               src="/lovable-uploads/11cd3668-92c0-4465-bf40-80761b6abb85.png" 
               alt="NAJA" 
-              className="block h-96 md:h-96 w-auto mx-auto"
+              className="block h-[30rem] md:h-[30rem] w-auto mx-auto relative z-0"
             />
-          </h1>
+          </div>
           
           <h2 className="text-2xl md:text-3xl text-navy-foreground/95 mb-8 max-w-3xl mx-auto leading-relaxed font-light">
             Where Mediterranean traditions meet American innovation in every carefully crafted dish
