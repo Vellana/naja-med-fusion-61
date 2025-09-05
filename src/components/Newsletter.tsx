@@ -103,7 +103,7 @@ const Newsletter = () => {
                     <ul className="space-y-3 text-sm text-muted-foreground">
                       {[
                         "Seasonal Mediterranean fusion menu previews",
-                        "Tariq Alaeddin's visionary creations blending Mediterranean heritage with American culture, delivering unique tastes", 
+                        "Tariq Alaeddin's visionary creations blending Mediterranean heritage with American culture, delivering unique tastes",
                         "Wine and cocktail pairing recommendations",
                         "Exclusive event invitations and culinary experiences"
                       ].map((benefit, index) => (

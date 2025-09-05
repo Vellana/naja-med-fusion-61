@@ -58,7 +58,7 @@ const Testimonials = () => {
               What Our Guests Say
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Discover why NAJA has become the premier destination for Mediterranean American cuisine
+              Discover why NAJA has become the premier destination for Mediterranean fusion cuisine
             </p>
           </div>
 

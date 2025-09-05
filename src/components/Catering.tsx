@@ -7,7 +7,7 @@ const Catering = () => {
     {
       icon: Users,
       title: "Corporate Events",
-      description: "Impress your clients and colleagues with sophisticated Mediterranean American cuisine tailored for business gatherings.",
+      description: "Impress your clients and colleagues with sophisticated Mediterranean fusion cuisine tailored for business gatherings.",
       features: ["Custom menu planning", "Professional service staff", "Flexible presentation options", "Dietary accommodations"]
     },
     {
@@ -19,7 +19,7 @@ const Catering = () => {
     {
       icon: Award,
       title: "Luxury Experiences",
-      description: "Elevate your event with our premium catering services featuring our signature Mediterranean American fusion.",
+      description: "Elevate your event with our premium catering services featuring our signature Mediterranean fusion.",
       features: ["Chef-curated selections", "Premium ingredients", "Artisanal presentation", "Sommelier wine pairings"]
     }
   ];

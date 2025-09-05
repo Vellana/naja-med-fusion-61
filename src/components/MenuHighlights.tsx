@@ -60,7 +60,7 @@ const MenuHighlights = () => {
               Menu Highlights
             </h2>
             <p className="text-xl text-navy-foreground/80 max-w-3xl mx-auto leading-relaxed">
-              Discover our signature dishes that perfectly capture the essence of Mediterranean American fusion cuisine
+              Discover our signature dishes that perfectly capture the essence of Mediterranean fusion cuisine
             </p>
           </div>
 
