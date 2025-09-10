@@ -4,56 +4,38 @@ import heroImage from '@/assets/hero-food.jpg';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 parallax-bg" style={{
-        backgroundImage: `url(${heroImage})`
-      }} />
-      
-      {/* Large Pattern Overlay */}
-      <div className="absolute inset-0 hero-pattern-large" />
-      
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-navy/60" />
-      
-      {/* Content */}
-      <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
-        <div className="animate-fade-in-up">
-          {/* Main Logo */}
-          <div className="mb-12">
-            <img 
-              src="/lovable-uploads/018b221c-9c10-4dfe-ac56-c8bf8167258b.png" 
-              alt="NAJA Mediterranean Restaurant" 
-              className="block h-96 w-auto mx-auto hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-          
-          {/* Bold Headline */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-montserrat font-black text-cream mb-8 leading-tight elegant-text-shadow">
-            Experience
+    <section id="home" className="relative min-h-screen bg-background flex items-center py-20 overflow-hidden">
+      {/* Content Container */}
+      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center max-w-7xl">
+        {/* Left Column - Text Content */}
+        <div className="animate-fade-in-left">
+          {/* Main Headline */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-black text-primary mb-6 leading-tight">
+            Authentic Mediterranean.
             <br />
-            <span className="text-gold">Mediterranean</span>
-            <br />
-            Excellence
+            <span className="text-accent">Modern Taste.</span>
           </h1>
           
-          {/* Mission Statement */}
-          <p className="text-xl md:text-2xl lg:text-3xl text-cream/90 mb-12 max-w-4xl mx-auto leading-relaxed font-lato font-light">
-            Where Mediterranean traditions meet American innovation in every carefully crafted dish
+          {/* Sub-headline */}
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl leading-relaxed font-lato font-light">
+            Experience the vibrant flavors of NAJA, crafted with passion in every dish.
           </p>
           
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button asChild size="lg" variant="gold" className="px-12 py-6 text-xl">
-              <a href="https://www.opentable.com/r/kirby-club-fairfax" target="_blank" rel="noopener noreferrer">
-                Reserve Now
-                <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-1" />
-              </a>
-            </Button>
-            
-            <Button size="lg" variant="outline" className="px-12 py-6 text-xl">
-              View Menu
-            </Button>
+          {/* Primary CTA */}
+          <Button size="lg" className="px-8 py-4 text-lg font-bold">
+            View Full Menu
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
+        </div>
+
+        {/* Right Column - Hero Image */}
+        <div className="animate-fade-in-right flex justify-center lg:justify-end">
+          <div className="image-hover-zoom">
+            <img 
+              src={heroImage}
+              alt="NAJA signature Mediterranean dish" 
+              className="w-full max-w-lg h-auto object-contain drop-shadow-2xl"
+            />
           </div>
         </div>
       </div>

@@ -5,30 +5,29 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-bold font-montserrat ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 duration-300 ease-out",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-bold font-montserrat ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 duration-300 ease-out",
   {
     variants: {
       variant: {
-        default: "bg-gold text-accent-foreground hover:bg-gold/90 hover:scale-105 shadow-gold",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 shadow-lg",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border-2 border-gold text-gold bg-transparent hover:bg-gold hover:text-accent-foreground transition-all duration-300",
+          "border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground transition-all duration-300",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "bg-accent text-accent-foreground hover:bg-accent/90 hover:scale-105 shadow-gold",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        gold: "bg-gold text-accent-foreground hover:bg-gold/90 hover:scale-105 shadow-gold font-bold",
       },
       size: {
-        default: "h-12 px-6 py-3 text-base",
-        sm: "h-9 rounded-md px-4 text-sm",
-        lg: "h-14 rounded-md px-10 py-4 text-lg font-bold",
-        icon: "h-10 w-10",
+        default: "h-12 px-8 py-3 text-base",
+        sm: "h-10 rounded-lg px-6 text-sm",
+        lg: "h-16 rounded-lg px-12 py-4 text-lg font-bold",
+        icon: "h-12 w-12",
       },
     },
     defaultVariants: {
-      variant: "gold",
+      variant: "default",
       size: "default",
     },
   }
