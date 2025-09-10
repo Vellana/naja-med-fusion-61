@@ -38,10 +38,11 @@ const Gallery = () => {
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-20 animate-fade-in-up">
-            <h2 className="text-5xl md:text-6xl font-light text-foreground mb-8 section-divider pb-6 font-cinzel">
+            <h2 className="text-5xl md:text-7xl font-montserrat font-black text-foreground mb-8 leading-tight">
               Gallery
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-light">
+            <div className="w-24 h-1 bg-gold mx-auto mb-8" />
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-lato font-light">
               A visual celebration of Mediterranean traditions meeting American innovation
             </p>
           </div>
@@ -64,38 +65,35 @@ const Gallery = () => {
           </div>
 
           {/* Gallery Mosaic Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
             {filteredItems.map((item, index) => (
               <div
                 key={item.id} 
-                className={`group overflow-hidden rounded-lg shadow-soft hover-lift animate-fade-in-up ${
+                className={`group image-hover-zoom rounded-lg overflow-hidden shadow-elegant animate-fade-in-up ${
                   index % 5 === 0 ? 'md:col-span-2 md:row-span-2' : 
                   index % 3 === 0 ? 'lg:col-span-2' : ''
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className={`${item.aspectRatio} relative overflow-hidden bg-gradient-elegant`}>
-                  {/* Image with NAJA palette tinting */}
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{ 
-                      backgroundImage: `url('${item.image}')`,
-                      filter: 'sepia(20%) saturate(1.2) hue-rotate(200deg)',
-                    }}
+                <div className={`${item.aspectRatio} relative overflow-hidden bg-cream`}>
+                  {/* Image with hover zoom */}
+                  <img 
+                    src={item.image}
+                    alt={item.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className={`absolute inset-0 bg-${item.tint}/20 mix-blend-overlay`} />
                   
                   {/* Content overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">
-                    <p className="text-white font-medium text-sm md:text-base">{item.title}</p>
+                    <p className="text-white font-montserrat font-semibold text-sm md:text-base">{item.title}</p>
                   </div>
                   
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                    <div className="text-center text-white transform scale-90 group-hover:scale-100 transition-transform duration-300">
+                  <div className="absolute inset-0 bg-gold/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                    <div className="text-center text-accent-foreground transform scale-90 group-hover:scale-100 transition-transform duration-300">
                       <Plus className="h-8 w-8 mx-auto mb-3" />
-                      <p className="text-lg font-light">{item.title}</p>
+                      <p className="text-lg font-montserrat font-bold">{item.title}</p>
                     </div>
                   </div>
                 </div>

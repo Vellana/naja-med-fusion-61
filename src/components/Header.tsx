@@ -40,22 +40,22 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-10">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-300 relative group"
+                className="text-foreground hover:text-gold transition-colors duration-300 relative group font-montserrat font-medium text-lg"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-gold transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button asChild className="bg-gradient-primary hover:bg-primary/90 text-primary-foreground shadow-elegant">
+            <Button asChild variant="gold" size="lg">
               <a href="https://www.opentable.com/r/kirby-club-fairfax" target="_blank" rel="noopener noreferrer">
                 Reserve Now
               </a>
@@ -84,13 +84,8 @@ const Header = () => {
                 {item.label}
               </a>
             ))}
-            <div className="px-4 pt-4 border-t border-border/20">
-                  <img 
-                    src="/lovable-uploads/608e426e-51bf-4175-bc39-50d2148f6b9d.png"
-                    alt="NAJA Mediterranean" 
-                    className="h-8 w-auto mb-4"
-                  />
-              <Button asChild className="w-full bg-gradient-primary hover:bg-primary/90 text-primary-foreground">
+            <div className="px-4 pt-4 border-t border-gold/20">
+              <Button asChild variant="gold" className="w-full">
                 <a href="https://www.opentable.com/r/kirby-club-fairfax" target="_blank" rel="noopener noreferrer">
                   Reserve Now
                 </a>

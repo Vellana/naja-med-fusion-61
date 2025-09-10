@@ -4,7 +4,7 @@ import heroImage from '@/assets/hero-food.jpg';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 parallax-bg" style={{
         backgroundImage: `url(${heroImage})`
@@ -14,55 +14,47 @@ const Hero = () => {
       <div className="absolute inset-0 hero-pattern-large" />
       
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-navy/70" />
+      <div className="absolute inset-0 bg-navy/60" />
       
       {/* Content */}
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-4">
+      <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
         <div className="animate-fade-in-up">
-          {/* Logo */}
-          <div className="mb-3 relative">
-            {/* Overlaid Experience text above logo */}
-            <div className="absolute top-[20%] left-1/2 transform -translate-x-1/2 w-full z-20">
-              <h1 className="text-6xl md:text-8xl font-bold text-navy-foreground mb-6 elegant-text-shadow">
-                <span className="font-cinzel font-normal">Experience</span>
-              </h1>
-            </div>
-            
+          {/* Main Logo */}
+          <div className="mb-12">
             <img 
               src="/lovable-uploads/018b221c-9c10-4dfe-ac56-c8bf8167258b.png" 
-              alt="NAJA" 
-              className="block h-[45rem] w-auto mx-auto"
+              alt="NAJA Mediterranean Restaurant" 
+              className="block h-96 w-auto mx-auto hover:scale-105 transition-transform duration-500"
             />
-            
-            {/* Overlaid content */}
-            <div className="absolute top-[65%] left-1/2 transform -translate-x-1/2 w-full z-20">
-              <h2 className="text-2xl md:text-3xl text-navy-foreground/95 mb-8 max-w-3xl mx-auto leading-relaxed font-light">
-                Where Mediterranean traditions meet American innovation in every carefully crafted dish
-              </h2>
-              
-              <p className="text-lg md:text-xl text-navy-foreground/80 mb-12 max-w-2xl mx-auto leading-relaxed">
-                Discover the perfect fusion of time-honored Mediterranean flavors with bold American culinary creativity
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <Button asChild size="lg" className="bg-gradient-primary hover:bg-primary/90 text-primary-foreground shadow-elegant hover-lift group px-10 py-5 text-xl font-semibold">
-                  <a href="https://www.opentable.com/r/kirby-club-fairfax" target="_blank" rel="noopener noreferrer">
-                    Reserve Now
-                    <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-1" />
-                  </a>
-                </Button>
-                
-                <Button size="lg" variant="outline" className="border-2 border-gold text-gold hover:bg-gold hover:text-navy transition-all duration-300 px-10 py-5 text-xl font-semibold backdrop-blur-sm">
-                  View Menu
-                </Button>
-              </div>
-            </div>
           </div>
-        </div>
-        
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           
+          {/* Bold Headline */}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-montserrat font-black text-cream mb-8 leading-tight elegant-text-shadow">
+            Experience
+            <br />
+            <span className="text-gold">Mediterranean</span>
+            <br />
+            Excellence
+          </h1>
+          
+          {/* Mission Statement */}
+          <p className="text-xl md:text-2xl lg:text-3xl text-cream/90 mb-12 max-w-4xl mx-auto leading-relaxed font-lato font-light">
+            Where Mediterranean traditions meet American innovation in every carefully crafted dish
+          </p>
+          
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <Button asChild size="lg" variant="gold" className="px-12 py-6 text-xl">
+              <a href="https://www.opentable.com/r/kirby-club-fairfax" target="_blank" rel="noopener noreferrer">
+                Reserve Now
+                <ArrowRight className="ml-3 h-6 w-6 transition-transform group-hover:translate-x-1" />
+              </a>
+            </Button>
+            
+            <Button size="lg" variant="outline" className="px-12 py-6 text-xl">
+              View Menu
+            </Button>
+          </div>
         </div>
       </div>
     </section>

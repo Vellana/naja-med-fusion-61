@@ -8,36 +8,36 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* NAJA Mediterranean Restaurant Brand Colors */
-    --background: 45 54% 93%; /* NAJA Cream */
-    --foreground: 220 30% 15%;
+    /* NAJA Mediterranean Restaurant Brand Colors - Redesigned */
+    --background: 45 54% 93%; /* Exact #F7F5EB Cream */
+    --foreground: 217 70% 37%; /* Exact #21529A NAJA Blue */
 
-    --card: 45 54% 95%; /* Slightly lighter NAJA Cream for cards */
-    --card-foreground: 220 30% 15%;
+    --card: 45 54% 95%; /* Slightly lighter cream for cards */
+    --card-foreground: 217 70% 37%;
 
-    --popover: 45 54% 95%; /* NAJA Cream for popovers */
-    --popover-foreground: 220 30% 15%;
+    --popover: 45 54% 95%; /* Cream for popovers */
+    --popover-foreground: 217 70% 37%;
 
-    /* NAJA Blue Primary - Updated Brand Color */
-    --primary: 217 70% 37%; /* #21529A */
-    --primary-foreground: 45 40% 96%;
+    /* NAJA Blue Primary - Exact Brand Color */
+    --primary: 217 70% 37%; /* Exact #21529A */
+    --primary-foreground: 0 0% 100%; /* Pure white */
     --primary-glow: 217 55% 50%;
 
     /* Mediterranean Cream Secondary */
-    --secondary: 45 54% 93%; /* #F7F5EB */
-    --secondary-foreground: 220 30% 20%;
+    --secondary: 45 54% 93%; /* Exact #F7F5EB */
+    --secondary-foreground: 217 70% 37%;
 
-    /* Gold Accents - Updated */
-    --accent: 45 39% 59%; /* #C7AC65 */
-    --accent-foreground: 220 50% 15%;
+    /* Gold Accents - Exact Brand Color */
+    --accent: 45 39% 59%; /* Exact #C7AC65 */
+    --accent-foreground: 0 0% 100%; /* Pure white */
     --accent-light: 45 50% 85%;
 
     /* Deep Navy for Contrast */
     --navy: 220 50% 15%;
-    --navy-foreground: 45 40% 95%;
+    --navy-foreground: 45 54% 93%;
 
-    /* Gold Accents */
-    --gold: 45 39% 59%; /* #C7AC65 */
+    /* Gold Accents - Exact Brand Color */
+    --gold: 45 39% 59%; /* Exact #C7AC65 */
     --gold-light: 45 50% 85%;
 
     /* Muted Tones */
@@ -138,7 +138,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-cream text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
   html {
@@ -192,6 +192,19 @@ All colors MUST be HSL.
   .hover-lift:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-elegant);
+  }
+
+  .image-hover-zoom {
+    transition: transform 0.4s ease-out;
+    overflow: hidden;
+  }
+
+  .image-hover-zoom img {
+    transition: transform 0.4s ease-out;
+  }
+
+  .image-hover-zoom:hover img {
+    transform: scale(1.1);
   }
 
   .parallax-bg {

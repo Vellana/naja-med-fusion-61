@@ -116,7 +116,9 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out'
 			},
 			fontFamily: {
-				'cinzel': ['Cinzel', 'serif']
+				'cinzel': ['Cinzel', 'serif'],
+				'montserrat': ['Montserrat', 'sans-serif'],
+				'lato': ['Lato', 'sans-serif']
 			}
 		}
 	},
