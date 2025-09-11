@@ -1,6 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Utensils, Wine, Coffee, Star } from 'lucide-react';
+import dish1 from '@/assets/dish-1.jpg';
+import dish2 from '@/assets/dish-2.jpg';
+import dish3 from '@/assets/dish-3.jpg';
 
 const MenuCategories = () => {
   const menuItems = [
@@ -9,7 +12,7 @@ const MenuCategories = () => {
       name: "Signature Mezze Tower",
       description: "Traditional favorites reimagined with modern flair",
       price: "$28",
-      image: "/src/assets/dish-1.jpg",
+      image: dish1,
       category: "Mediterranean Plates"
     },
     {
@@ -17,7 +20,7 @@ const MenuCategories = () => {
       name: "Mediterranean Burger",
       description: "American classic with feta, olives, and herb aioli",
       price: "$24",
-      image: "/src/assets/dish-2.jpg",
+      image: dish2,
       category: "American Fusion"
     },
     {
@@ -25,7 +28,7 @@ const MenuCategories = () => {
       name: "Grilled Branzino",
       description: "Whole fish with Mediterranean herbs and lemon",
       price: "$32",
-      image: "/src/assets/dish-3.jpg",
+      image: dish3,
       category: "Mediterranean Plates"
     }
   ];
