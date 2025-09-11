@@ -32,7 +32,7 @@ const Hero = () => {
             Explore The Menu
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
-          <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-black w-full sm:w-auto text-lg px-8 py-6">
+          <Button size="lg" variant="outline" className="border-2 border-accent text-accent hover:bg-accent hover:text-primary-foreground w-full sm:w-auto text-lg px-8 py-6">
             Book a Table
           </Button>
         </div>

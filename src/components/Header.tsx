@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
-import najaLogo from '@/assets/naja-logo-new.png';
+
+const logoBlue = '/lovable-uploads/a8ba7788-a198-4180-a269-982da8c9cdab.png';
+const logoWhite = '/lovable-uploads/7b85a113-8dbb-48bf-82e0-f4d04d632d56.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -9,11 +11,21 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const headerClasses = isScrolled
+    ? 'bg-background/95 shadow-md backdrop-blur-sm'
+    : 'bg-transparent';
+
+  const navLinkClasses = isScrolled
+    ? 'text-primary hover:text-accent'
+    : 'text-white drop-shadow-md hover:text-gray-200';
+  
+  const currentLogo = isScrolled ? logoBlue : logoWhite;
 
   const navItems = [
     { label: 'Home', href: '#home' },
@@ -25,15 +37,13 @@ const Header = () => {
   ];
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'glass-effect shadow-soft' : 'bg-transparent'
-    }`}>
+    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${headerClasses}`}>
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/608e426e-51bf-4175-bc39-50d2148f6b9d.png"
+              src={currentLogo}
               alt="NAJA Mediterranean" 
               className="h-12 w-auto"
             />
@@ -45,7 +55,7 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-foreground hover:text-accent transition-colors duration-300 relative group font-montserrat font-medium text-lg"
+                className={`transition-colors duration-300 relative group font-montserrat font-medium text-lg ${navLinkClasses}`}
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
@@ -55,16 +65,16 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button asChild size="default" className="bg-primary text-primary-foreground hover:bg-primary/90">
-              <a href="https://www.opentable.com/r/kirby-club-fairfax" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.opentable.com" target="_blank" rel="noopener noreferrer">
+              <Button size="default" className="bg-[#0a7a0d] text-white hover:bg-[#064e08]">
                 Order Online
-              </a>
-            </Button>
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground hover:text-primary transition-colors"
+            className={`md:hidden transition-colors ${navLinkClasses}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -73,23 +83,23 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 border-t border-border glass-effect rounded-lg">
+          <div className="md:hidden mt-4 py-4 border-t border-border/50 bg-background/95 backdrop-blur-sm rounded-lg">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="block py-2 px-4 text-foreground hover:text-primary hover:bg-secondary/50 rounded transition-all duration-300"
+                className="block py-2 px-4 text-primary hover:text-accent hover:bg-black/5 rounded transition-all duration-300"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.label}
               </a>
             ))}
-            <div className="px-4 pt-4 border-t border-accent/20">
-              <Button asChild className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                <a href="https://www.opentable.com/r/kirby-club-fairfax" target="_blank" rel="noopener noreferrer">
+            <div className="px-4 pt-4 mt-2 border-t border-accent/20">
+              <a href="https://www.opentable.com" target="_blank" rel="noopener noreferrer">
+                <Button className="w-full bg-[#0a7a0d] text-white hover:bg-[#064e08]">
                   Order Online
-                </a>
-              </Button>
+                </Button>
+              </a>
             </div>
           </div>
         )}
