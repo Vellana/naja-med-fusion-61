@@ -1,16 +1,16 @@
-import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
+import { MapPin, Phone, Mail, Facebook, Instagram, Twitter } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-// Use the correct path to the light-colored logo we identified
 const footerLogo = '/lovable-uploads/7b85a113-8dbb-48bf-82e0-f4d04d632d56.png';
 
 const Footer = () => {
   const navigationLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Menu', href: '#menu' },
-    { label: 'Gallery', href: '/gallery' }, // Future page link
-    { label: 'Catering', href: '/catering' }, // Future page link
-    { label: 'Contact', href: '/contact' } // Future page link
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/#about' },
+    { label: 'Menu', href: '/#menu' },
+    { label: 'Gallery', href: '/gallery' }, // Changed to page link
+    { label: 'Catering', href: '/catering' },
+    { label: 'Contact', href: '/contact' }
   ];
 
   const socialLinks = [
@@ -24,10 +24,8 @@ const Footer = () => {
       <div className="absolute inset-0 bg-[url('@/assets/diamond-pattern-small.png')] bg-repeat opacity-5" />
       
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Footer Content */}
         <div className="py-20 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           
-          {/* Brand Section */}
           <div className="lg:col-span-2">
             <img 
               src={footerLogo}
@@ -51,21 +49,19 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="text-lg font-bold text-white mb-4 font-montserrat">Quick Links</h4>
             <ul className="space-y-3">
               {navigationLinks.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-secondary/80 hover:text-accent transition-colors duration-300">
+                  <Link to={link.href} className="text-secondary/80 hover:text-accent transition-colors duration-300">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h4 className="text-lg font-bold text-white mb-4 font-montserrat">Contact</h4>
             <ul className="space-y-4 text-sm">
@@ -85,7 +81,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Footer Bar */}
         <div className="border-t border-secondary/10 py-6 flex flex-col md:flex-row justify-between items-center text-sm">
           <p className="text-secondary/50 mb-4 md:mb-0">
             © {new Date().getFullYear()} NAJA Mediterranean Fusion. All rights reserved.
