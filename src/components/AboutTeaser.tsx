@@ -22,7 +22,7 @@ const AboutTeaser = () => {
             <h2 className="text-4xl md:text-5xl font-montserrat font-black text-primary mb-6 leading-tight">
               Fresh Ingredients,
               <br />
-              <span className="text-accent">Rich Tradition</span>
+              <span className="text-accent">Rich Tradition.</span>
             </h2>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed font-lato">

@@ -27,14 +27,13 @@ const MenuCategories = () => {
           </p>
         </div>
 
-        {/* Categories Grid - with White Glow Text */}
+        {/* Categories Grid - Animation and Glow Removed */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {menuCategories.map((category, index) => (
+          {menuCategories.map((category) => (
             <a 
               href="#menu"
               key={category.name}
-              className="relative block rounded-lg overflow-hidden group shadow-lg"
-              style={{ animation: `fadeInUp 0.5s ease-out ${index * 0.15}s forwards`, opacity: 0 }}
+              className="relative block rounded-lg overflow-hidden group shadow-lg hover-lift"
             >
               <img 
                 src={imageMap[category.imagePath]}
@@ -46,7 +45,7 @@ const MenuCategories = () => {
               
               {/* Text Overlay at the bottom */}
               <div className="absolute bottom-0 left-0 p-6">
-                <h3 className="text-3xl font-bold font-montserrat text-white text-glow-gold">{category.name}</h3>
+                <h3 className="text-3xl font-bold font-montserrat text-white drop-shadow-md">{category.name}</h3>
                 <p className="mt-2 text-secondary drop-shadow-sm font-lato">{category.description}</p>
               </div>
             </a>
