@@ -1,5 +1,7 @@
-import { MapPin, Phone, Mail, Facebook, Instagram, Twitter } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Facebook, Instagram, Twitter } from 'lucide-react';
+
 
 const footerLogo = '/lovable-uploads/7b85a113-8dbb-48bf-82e0-f4d04d632d56.png';
 
@@ -8,8 +10,8 @@ const Footer = () => {
     { label: 'Home', href: '/' },
     { label: 'About', href: '/#about' },
     { label: 'Menu', href: '/#menu' },
-    { label: 'Gallery', href: '/gallery' }, // Changed to page link
-    { label: 'Catering', href: '/catering' },
+    { label: 'Gallery', href: '/gallery' },
+    { label: 'Catering', href: '/catering' }, // Changed to page link
     { label: 'Contact', href: '/contact' }
   ];
 

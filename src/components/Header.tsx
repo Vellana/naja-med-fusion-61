@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
-// The Link component from React Router is needed for page navigation
 import { Link } from 'react-router-dom'; 
 
 const logoBlue = '/lovable-uploads/a8ba7788-a198-4180-a269-982da8c9cdab.png';
@@ -24,11 +23,11 @@ const Header = () => {
   const currentLogo = isScrolled ? logoBlue : logoWhite;
 
   const navItems = [
-    { label: 'Home', href: '/' }, // Changed to root link
-    { label: 'About', href: '/#about' }, // Links to section on homepage
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/#about' },
     { label: 'Menu', href: '/#menu' },
-    { label: 'Gallery', href: '/gallery' }, // Changed to page link
-    { label: 'Catering', href: '/catering' }, // Future page link
+    { label: 'Gallery', href: '/gallery' },
+    { label: 'Catering', href: '/catering' }, // Changed to page link
     { label: 'Contact', href: '/contact' } // Future page link
   ];
 
