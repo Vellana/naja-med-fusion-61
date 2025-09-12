@@ -1,85 +1,63 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Utensils, Wine, Coffee, Star } from 'lucide-react';
+import { menuCategories } from '@/data/menuData';
+
+// Import all necessary images at the top
+import appetizerImage from '@/assets/dish-1.jpg';
+import mainCourseImage from '@/assets/dish-2.jpg';
+import dessertImage from '@/assets/dish-3.jpg';
+
+// Create a mapping from the string path to the imported image
+const imageMap: { [key: string]: string } = {
+  '@/assets/dish-1.jpg': appetizerImage,
+  '@/assets/dish-2.jpg': mainCourseImage,
+  '@/assets/dish-3.jpg': dessertImage,
+};
 
 const MenuCategories = () => {
-  const menuItems = [
-    {
-      id: 1,
-      name: "Signature Mezze Tower",
-      description: "Traditional favorites reimagined with modern flair",
-      price: "$28",
-      image: "/src/assets/dish-1.jpg",
-      category: "Mediterranean Plates"
-    },
-    {
-      id: 2,
-      name: "Mediterranean Burger",
-      description: "American classic with feta, olives, and herb aioli",
-      price: "$24",
-      image: "/src/assets/dish-2.jpg",
-      category: "American Fusion"
-    },
-    {
-      id: 3,
-      name: "Grilled Branzino",
-      description: "Whole fish with Mediterranean herbs and lemon",
-      price: "$32",
-      image: "/src/assets/dish-3.jpg",
-      category: "Mediterranean Plates"
-    }
-  ];
-
   return (
     <section id="menu" className="py-20 bg-background">
-      <div className="container mx-auto px-6">
-        <div className="max-w-7xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl md:text-6xl font-montserrat font-black text-primary mb-6 leading-tight">
-              Explore Our Favorites
-            </h2>
-            <div className="w-20 h-1 bg-accent mx-auto mb-6" />
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-lato font-light">
-              Discover our signature dishes that perfectly capture the essence of Mediterranean fusion cuisine
-            </p>
-          </div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-primary font-montserrat mb-4">
+            A Taste of Our Menu
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-lato">
+            Each dish is a conversation between Mediterranean heritage and American innovation. Explore our categories to find your next favorite.
+          </p>
+        </div>
 
-          {/* Three-Column Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {menuItems.map((item, index) => (
-              <div 
-                key={item.id} 
-                className="bg-card border-0 rounded-xl shadow-lg hover-lift animate-fade-in-up overflow-hidden"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {/* Image with Hover Effect */}
-                <div className="image-hover-zoom">
-                  <img 
-                    src={item.image} 
-                    alt={item.name}
-                    className="w-full h-64 object-cover"
-                  />
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="text-2xl font-montserrat font-bold text-primary mb-3 leading-tight">{item.name}</h3>
-                  <p className="text-muted-foreground font-lato leading-relaxed mb-4">{item.description}</p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-foreground font-montserrat font-medium">{item.category}</span>
-                    <span className="text-2xl font-montserrat font-black text-accent">{item.price}</span>
-                  </div>
-                </div>
+        {/* Categories Grid - with White Glow Text */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {menuCategories.map((category, index) => (
+            <a 
+              href="#menu"
+              key={category.name}
+              className="relative block rounded-lg overflow-hidden group shadow-lg"
+              style={{ animation: `fadeInUp 0.5s ease-out ${index * 0.15}s forwards`, opacity: 0 }}
+            >
+              <img 
+                src={imageMap[category.imagePath]}
+                alt={category.name}
+                className="w-full h-96 object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+              {/* Overlay for text readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+              
+              {/* Text Overlay at the bottom */}
+              <div className="absolute bottom-0 left-0 p-6">
+                <h3 className="text-3xl font-bold font-montserrat text-white text-glow-gold">{category.name}</h3>
+                <p className="mt-2 text-secondary drop-shadow-sm font-lato">{category.description}</p>
               </div>
-            ))}
-          </div>
+            </a>
+          ))}
+        </div>
 
-          {/* CTA Section */}
-          <div className="text-center">
-            <Button size="lg" variant="secondary" className="px-12 py-6 text-xl">
-              View Full Menu
-            </Button>
-          </div>
+        {/* CTA Section */}
+        <div className="text-center">
+          <Button size="lg" className="bg-action text-white hover:bg-action/90 text-lg px-10 py-6">
+            View The Full Menu
+          </Button>
         </div>
       </div>
     </section>
