@@ -29,6 +29,8 @@
     --input: 45 15% 88%;
     --ring: 220 85% 45%;
     --radius: 0.75rem;
+    --navy: 220 50% 15%;
+    --navy-foreground: 45 54% 93%;
   }
 
   .dark {
@@ -53,22 +55,10 @@
 
 /* Custom NAJA Restaurant Styles */
 @layer components {
-  .hover-lift {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .hover-lift:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 40px -10px hsl(var(--foreground) / 0.15);
-  }
+  /* ... Custom component styles will go here ... */
 }
 
 /* Animations */
 @layer utilities {
-  .animate-fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+  /* ... Custom utility styles will go here ... */
 }
