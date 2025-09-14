@@ -6,8 +6,8 @@ export const siteConfig = {
   phone: "(571) 430-3650",
   email: "info@naja.com",
   mapCoordinates: {
-    lat: 38.8686, // More precise coordinates for the address
-    lng: -77.2407,
+    lat: 38.87187, // Your new precise latitude
+    lng: -77.22932, // Your new precise longitude
   },
   socials: {
     facebook: "#",
