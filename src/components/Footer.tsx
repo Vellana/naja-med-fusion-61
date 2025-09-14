@@ -8,10 +8,10 @@ const footerLogo = '/lovable-uploads/7b85a113-8dbb-48bf-82e0-f4d04d632d56.png';
 const Footer = () => {
   const navigationLinks = [
     { label: 'Home', href: '/' },
-    { label: 'About', href: '/#about' },
-    { label: 'Menu', href: '/#menu' },
+    { label: 'About', href: '/about' },
+    { label: 'Menu', href: '/menu' }, // Changed to page link
     { label: 'Gallery', href: '/gallery' },
-    { label: 'Catering', href: '/catering' }, // Changed to page link
+    { label: 'Catering', href: '/catering' },
     { label: 'Contact', href: '/contact' }
   ];
 

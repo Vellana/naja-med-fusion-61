@@ -27,11 +27,11 @@ const MenuCategories = () => {
           </p>
         </div>
 
-        {/* Categories Grid - Animation and Glow Removed */}
+        {/* Categories Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {menuCategories.map((category) => (
             <a 
-              href="#menu"
+              href="/menu" // Link to the full menu page
               key={category.name}
               className="relative block rounded-lg overflow-hidden group shadow-lg hover-lift"
             >
@@ -40,10 +40,7 @@ const MenuCategories = () => {
                 alt={category.name}
                 className="w-full h-96 object-cover transform group-hover:scale-105 transition-transform duration-500"
               />
-              {/* Overlay for text readability */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
-              
-              {/* Text Overlay at the bottom */}
               <div className="absolute bottom-0 left-0 p-6">
                 <h3 className="text-3xl font-bold font-montserrat text-white drop-shadow-md">{category.name}</h3>
                 <p className="mt-2 text-secondary drop-shadow-sm font-lato">{category.description}</p>
@@ -54,9 +51,11 @@ const MenuCategories = () => {
 
         {/* CTA Section */}
         <div className="text-center">
-          <Button size="lg" className="bg-action text-white hover:bg-action/90 text-lg px-10 py-6">
-            View The Full Menu
-          </Button>
+          <a href="/menu">
+            <Button size="lg" className="bg-action text-white hover:bg-action/90 text-lg px-10 py-6">
+              View The Full Menu
+            </Button>
+          </a>
         </div>
       </div>
     </section>
