@@ -1,19 +1,18 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import PageLayout from '@/components/PageLayout';
 import { Button } from '@/components/ui/button';
 
-// --- DATA MOVED LOCALLY ---
+// --- DATA MOVED LOCALLY TO BYPASS IMPORT ERROR ---
 interface MenuItem {
   name: string;
   description: string;
   price: string;
 }
-
 interface MenuCategory {
   name: string;
   items: MenuItem[];
 }
-
 const menuData: MenuCategory[] = [
   {
     name: "Appetizers",
@@ -46,9 +45,9 @@ const menuData: MenuCategory[] = [
 
 const MenuPage = () => {
   return (
-    <div className="bg-background">
+    <PageLayout>
       <Header />
-      <main className="pt-24 pb-20">
+      <div className="pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center mb-12">
@@ -94,9 +93,9 @@ const MenuPage = () => {
           </div>
 
         </div>
-      </main>
+      </div>
       <Footer />
-    </div>
+    </PageLayout>
   );
 };
 

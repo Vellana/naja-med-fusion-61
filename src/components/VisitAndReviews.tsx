@@ -1,14 +1,30 @@
-// src/components/VisitAndReviews.tsx
 import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { MapPin } from 'lucide-react';
-import PromotionalSlideshow from './PromotionalSlideshow';
 import Testimonials from './Testimonials';
+import PromotionalSlideshow from './PromotionalSlideshow';
+import { GoogleMap, useJsApiLoader, MarkerF } from '@react-google-maps/api';
+import { siteConfig } from '@/data/siteConfig'; // Import our new config file
 
 const VisitAndReviews = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = 3; 
+
+  // --- GOOGLE MAPS SETUP ---
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
+  });
+
+  const containerStyle = {
+    width: '100%',
+    height: '100%',
+  };
+
+  // The map center now comes from our single source of truth
+  const center = siteConfig.mapCoordinates;
+  // --- END GOOGLE MAPS SETUP ---
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -32,13 +48,25 @@ const VisitAndReviews = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           
           <div className="space-y-8">
-            <Card className="overflow-hidden shadow-lg">
-              <div className="aspect-video bg-gray-200 flex items-center justify-center">
-                <div className="text-center text-muted-foreground">
-                  <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <p className="font-semibold">Interactive Map Coming Soon</p>
+            <Card className="overflow-hidden shadow-lg aspect-video">
+              {isLoaded ? (
+                <GoogleMap
+                  mapContainerStyle={containerStyle}
+                  center={center}
+                  zoom={15}
+                  options={{
+                    streetViewControl: false,
+                    mapTypeControl: false,
+                    fullscreenControl: false,
+                  }}
+                >
+                  <MarkerF position={center} />
+                </GoogleMap>
+              ) : (
+                <div className="flex items-center justify-center h-full bg-gray-200">
+                  <p className="text-muted-foreground">Loading Map...</p>
                 </div>
-              </div>
+              )}
             </Card>
             <Card className="bg-secondary/50 border-accent/20">
               <CardContent className="p-6">
