@@ -1,19 +1,15 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import MenuCategories from '@/components/MenuCategories';
-import AboutTeaser from '@/components/AboutTeaser';
-import CateringCTA from '@/components/CateringCTA';
-import VisitAndReviews from '@/components/VisitAndReviews'; // Import our new component
+import OfferingsCarousel from '@/components/OfferingsCarousel'; // Import our new carousel
+import VisitAndReviews from '@/components/VisitAndReviews';
 import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="bg-background">
       <Header />
       <Hero />
-      <MenuCategories />
-      <AboutTeaser />
-      <CateringCTA />
+      <OfferingsCarousel />
       <VisitAndReviews /> 
       <Footer />
     </div>

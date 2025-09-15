@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImage from '@/assets/hero-food.jpg'; // Correctly importing the JPG from your src/assets folder
+import { Link } from 'react-router-dom';
+import heroImage from '@/assets/hero-food.jpg'; // Using the full-width background image
 
 const Hero = () => {
   return (
@@ -11,30 +12,34 @@ const Hero = () => {
         backgroundImage: `url(${heroImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed', // Creates a subtle parallax effect
       }}
     >
-      {/* Dark Overlay */}
+      {/* Dark Overlay for Readability */}
       <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
 
       {/* Text Content */}
-      <div className="relative z-10 animate-fade-in-up">
+      <div className="relative z-10">
         <h1 className="text-5xl md:text-7xl font-extrabold font-montserrat leading-tight tracking-tight drop-shadow-lg">
           A Bold Fusion of
           <br />
-          <span className="text-[#C7AC65]">Flavor & Tradition.</span>
+          <span className="text-accent">Flavor & Tradition.</span>
         </h1>
-        <p className="mt-6 text-xl max-w-2xl mx-auto font-lato drop-shadow-md">
-          Welcome to NAJA. Where timeless Mediterranean recipes are reimagined with an innovative American spirit to create a truly unforgettable dining experience.
+        <p className="mt-6 text-xl max-w-2xl mx-auto font-lato text-gray-200 drop-shadow-md">
+          NAJA is a culinary dialogue between Mediterranean heritage and American innovation, founded on a passion for exceptional ingredients and shared experiences.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg" className="bg-[#C7AC65] text-black hover:bg-yellow-500 w-full sm:w-auto text-lg px-8 py-6">
-            Explore The Menu
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-          <Button size="lg" variant="outline" className="border-2 border-accent text-accent hover:bg-accent hover:text-primary-foreground w-full sm:w-auto text-lg px-8 py-6">
-            Book a Table
-          </Button>
+          <Link to="/menu">
+            <Button size="lg" className="bg-action text-white hover:bg-action/90 w-full sm:w-auto text-lg px-8 py-6">
+              Explore The Menu
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
+          <Link to="/contact">
+            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-black w-full sm:w-auto text-lg px-8 py-6">
+              Book a Table
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
