@@ -2,14 +2,14 @@ import { MapPin, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Twitter } from 'lucide-react';
 
-
+// Using the correct public path for the light-colored logo
 const footerLogo = '/lovable-uploads/7b85a113-8dbb-48bf-82e0-f4d04d632d56.png';
 
 const Footer = () => {
   const navigationLinks = [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
-    { label: 'Menu', href: '/menu' }, // Changed to page link
+    { label: 'Menu', href: '/menu' },
     { label: 'Gallery', href: '/gallery' },
     { label: 'Catering', href: '/catering' },
     { label: 'Contact', href: '/contact' }
@@ -26,14 +26,16 @@ const Footer = () => {
       <div className="absolute inset-0 bg-[url('@/assets/diamond-pattern-small.png')] bg-repeat opacity-5" />
       
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="py-20 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-left">
           
           <div className="lg:col-span-2">
-            <img 
-              src={footerLogo}
-              alt="NAJA Mediterranean" 
-              className="h-16 w-auto mb-6"
-            />
+            <Link to="/">
+              <img 
+                src={footerLogo}
+                alt="NAJA Mediterranean" 
+                className="h-16 w-auto mb-6"
+              />
+            </Link>
             <p className="text-secondary/80 leading-relaxed max-w-sm font-lato text-base mb-6">
               Where Mediterranean heritage meets American innovation—creating exceptional culinary experiences.
             </p>

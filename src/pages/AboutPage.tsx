@@ -3,7 +3,7 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Leaf, Users, Handshake } from 'lucide-react';
-import aboutImage from '@/assets/restaurant-interior.jpg'; // Using a placeholder image for now
+import aboutImage from '@/assets/restaurant-interior.jpg';
 
 const AboutPage = () => {
   const values = [
@@ -30,7 +30,6 @@ const AboutPage = () => {
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Page Header */}
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-extrabold text-primary font-montserrat mb-4">
               Our Story
@@ -40,7 +39,6 @@ const AboutPage = () => {
             </p>
           </div>
 
-          {/* Story Section */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img src={aboutImage} alt="Visionary behind NAJA" className="w-full h-full object-cover" />
@@ -56,7 +54,6 @@ const AboutPage = () => {
             </div>
           </div>
 
-          {/* Our Philosophy Section */}
           <div className="text-center mb-20">
             <h2 className="text-4xl font-bold text-primary font-montserrat mb-12">Our Philosophy</h2>
             <div className="grid md:grid-cols-3 gap-8">
@@ -72,12 +69,11 @@ const AboutPage = () => {
             </div>
           </div>
           
-          {/* CTA Section */}
           <div className="text-center">
             <Card className="inline-block p-8 bg-secondary/50 shadow-lg">
               <h3 className="text-2xl font-bold text-primary mb-4">Experience the Story Yourself</h3>
               <p className="text-muted-foreground mb-6">Join us for a memorable dining experience.</p>
-              <Button size="lg" className="bg-action text-white hover:bg-action/90 text-lg px-10 py-6">
+              <Button size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-primary-foreground text-lg px-10 py-6">
                 Book a Table
               </Button>
             </Card>

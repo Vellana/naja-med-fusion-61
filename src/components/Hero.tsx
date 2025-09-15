@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from 'react-router-dom';
-import heroImage from '@/assets/hero-food.jpg'; // Using the full-width background image
+import heroImage from '@/assets/hero-food.jpg';
 
 const Hero = () => {
   return (
@@ -12,13 +12,10 @@ const Hero = () => {
         backgroundImage: `url(${heroImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed', // Creates a subtle parallax effect
+        backgroundAttachment: 'fixed',
       }}
     >
-      {/* Dark Overlay for Readability */}
       <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
-
-      {/* Text Content */}
       <div className="relative z-10">
         <h1 className="text-5xl md:text-7xl font-extrabold font-montserrat leading-tight tracking-tight drop-shadow-lg">
           A Bold Fusion of
@@ -30,7 +27,7 @@ const Hero = () => {
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link to="/menu">
-            <Button size="lg" className="bg-action text-white hover:bg-action/90 w-full sm:w-auto text-lg px-8 py-6">
+            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 w-full sm:w-auto text-lg px-8 py-6">
               Explore The Menu
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>

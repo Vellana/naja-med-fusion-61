@@ -25,7 +25,7 @@ const Header = () => {
   const navItems = [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
-    { label: 'Menu', href: '/menu' }, // Changed to page link
+    { label: 'Menu', href: '/menu' },
     { label: 'Gallery', href: '/gallery' },
     { label: 'Catering', href: '/catering' },
     { label: 'Contact', href: '/contact' }
@@ -56,7 +56,7 @@ const Header = () => {
           </div>
           <div className="hidden md:block">
             <a href="https://www.opentable.com" target="_blank" rel="noopener noreferrer">
-              <Button size="default" className="bg-[#0a7a0d] text-white hover:bg-[#064e08]">
+              <Button size="default" className="bg-accent text-accent-foreground hover:bg-accent/90">
                 Order Online
               </Button>
             </a>
@@ -82,7 +82,7 @@ const Header = () => {
             ))}
             <div className="px-4 pt-4 mt-2 border-t border-accent/20">
               <a href="https://www.opentable.com" target="_blank" rel="noopener noreferrer">
-                <Button className="w-full bg-[#0a7a0d] text-white hover:bg-[#064e08]">
+                <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
                   Order Online
                 </Button>
               </a>

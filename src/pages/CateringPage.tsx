@@ -12,7 +12,6 @@ const CateringPage = () => {
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Page Header */}
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-extrabold text-primary font-montserrat mb-4">
               Exceptional Catering
@@ -24,7 +23,6 @@ const CateringPage = () => {
 
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
             
-            {/* Left Column: Catering Packages */}
             <div className="space-y-8">
               <h2 className="text-3xl font-bold text-primary font-montserrat">Our Offerings</h2>
               <Card className="text-center hover-lift bg-gray-50/50 shadow-lg border">
@@ -50,7 +48,6 @@ const CateringPage = () => {
               </Card>
             </div>
 
-            {/* Right Column: Inquiry Form */}
             <div>
               <Card className="p-8 shadow-lg">
                 <h2 className="text-3xl font-bold text-primary font-montserrat mb-6">Plan Your Event</h2>
@@ -71,7 +68,7 @@ const CateringPage = () => {
                     <Textarea placeholder="Tell us more about your event..." className="min-h-[150px]" />
                   </div>
                   <div className="text-center pt-2">
-                    <Button size="lg" className="bg-[#0a7a0d] text-white hover:bg-[#064e08] w-full sm:w-auto text-lg px-10 py-6">
+                    <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 w-full sm:w-auto text-lg px-10 py-6">
                       Submit Inquiry
                     </Button>
                   </div>

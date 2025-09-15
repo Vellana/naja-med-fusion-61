@@ -1,12 +1,13 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import OfferingsCarousel from '@/components/OfferingsCarousel'; // Import our new carousel
+import OfferingsCarousel from '@/components/OfferingsCarousel';
 import VisitAndReviews from '@/components/VisitAndReviews';
 import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="bg-background">
+    // FIX: overflow-x-hidden prevents horizontal scrolling on mobile
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Header />
       <Hero />
       <OfferingsCarousel />
