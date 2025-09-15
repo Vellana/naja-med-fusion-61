@@ -3,8 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom'; 
 
-const logoBlue = '/lovable-uploads/a8ba7788-a198-4180-a269-982da8c9cdab.png';
-const logoWhite = '/lovable-uploads/7b85a113-8dbb-48bf-82e0-f4d04d632d56.png';
+const logoBlue = '/logo-blue.png';
+const logoWhite = '/logo-white.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,7 +25,7 @@ const Header = () => {
   const navItems = [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
-    { label: 'Menu', href: '/menu' }, // Changed to page link
+    { label: 'Menu', href: '/menu' },
     { label: 'Gallery', href: '/gallery' },
     { label: 'Catering', href: '/catering' },
     { label: 'Contact', href: '/contact' }
@@ -33,21 +33,21 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${headerClasses}`}>
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           <Link to="/">
             <img 
               src={currentLogo}
               alt="NAJA Mediterranean" 
-              className="h-12 w-auto"
+              className="h-12 w-40 object-contain"
             />
           </Link>
-          <div className="hidden md:flex items-center space-x-10">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.label}
                 to={item.href}
-                className={`transition-colors duration-300 relative group font-montserrat font-medium text-lg ${navLinkClasses}`}
+                className={`transition-colors duration-300 relative group font-montserrat font-medium text-base ${navLinkClasses}`}
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
@@ -55,8 +55,8 @@ const Header = () => {
             ))}
           </div>
           <div className="hidden md:block">
-            <a href="https://www.opentable.com" target="_blank" rel="noopener noreferrer">
-              <Button size="default" className="bg-[#0a7a0d] text-white hover:bg-[#064e08]">
+            <a href="https://www.opentable.com/r/naja-mediterranean-fairfax" target="_blank" rel="noopener noreferrer">
+              <Button size="default" className="bg-accent text-accent-foreground hover:bg-accent/90">
                 Order Online
               </Button>
             </a>
@@ -74,15 +74,15 @@ const Header = () => {
               <Link
                 key={item.label}
                 to={item.href}
-                className="block py-2 px-4 text-primary hover:text-accent hover:bg-black/5 rounded transition-all duration-300"
+                className="block py-3 px-4 text-primary hover:text-accent hover:bg-black/5 rounded transition-all duration-300 text-lg"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
             <div className="px-4 pt-4 mt-2 border-t border-accent/20">
-              <a href="https://www.opentable.com" target="_blank" rel="noopener noreferrer">
-                <Button className="w-full bg-[#0a7a0d] text-white hover:bg-[#064e08]">
+              <a href="https://www.opentable.com/r/naja-mediterranean-fairfax" target="_blank" rel="noopener noreferrer">
+                <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
                   Order Online
                 </Button>
               </a>

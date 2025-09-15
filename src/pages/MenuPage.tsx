@@ -1,9 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import PageLayout from '@/components/PageLayout';
-import { Button } from '@/components/ui/button';
 
-// --- DATA MOVED LOCALLY TO BYPASS IMPORT ERROR ---
+// --- Data is localized to prevent import issues ---
 interface MenuItem {
   name: string;
   description: string;
@@ -41,16 +39,16 @@ const menuData: MenuCategory[] = [
     ],
   },
 ];
-// --- END LOCAL DATA ---
+// --- End Local Data ---
 
 const MenuPage = () => {
   return (
-    <PageLayout>
+    <div className="bg-background">
       <Header />
-      <div className="pt-24 pb-20">
+      <main className="pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-extrabold text-primary font-montserrat mb-4">
               Our Menu
             </h1>
@@ -59,17 +57,7 @@ const MenuPage = () => {
             </p>
           </div>
 
-          <div className="sticky top-20 z-20 bg-background/80 backdrop-blur-sm py-4 mb-12 rounded-lg shadow-sm border">
-            <div className="flex justify-center flex-wrap gap-4">
-              {menuData.map(category => (
-                <a key={category.name} href={`#${category.name.toLowerCase().replace(/\s+/g, '-')}`}>
-                  <Button variant="ghost" className="text-primary hover:bg-accent/10">
-                    {category.name}
-                  </Button>
-                </a>
-              ))}
-            </div>
-          </div>
+          {/* Sticky Sub-Navigation has been removed */}
 
           <div className="space-y-16">
             {menuData.map(category => (
@@ -93,9 +81,9 @@ const MenuPage = () => {
           </div>
 
         </div>
-      </div>
+      </main>
       <Footer />
-    </PageLayout>
+    </div>
   );
 };
 
