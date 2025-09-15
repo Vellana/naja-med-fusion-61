@@ -24,11 +24,11 @@ const Header = () => {
 
   const navItems = [
     { label: 'Home', href: '/' },
-    { label: 'About', href: '/#about' },
-    { label: 'Menu', href: '/#menu' },
+    { label: 'About', href: '/about' },
+    { label: 'Menu', href: '/menu' }, // Changed to page link
     { label: 'Gallery', href: '/gallery' },
-    { label: 'Catering', href: '/catering' }, // Changed to page link
-    { label: 'Contact', href: '/contact' } // Future page link
+    { label: 'Catering', href: '/catering' },
+    { label: 'Contact', href: '/contact' }
   ];
 
   return (
