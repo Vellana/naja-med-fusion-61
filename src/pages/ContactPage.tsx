@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -7,18 +8,54 @@ import { Textarea } from '@/components/ui/textarea';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { GoogleMap, useJsApiLoader, MarkerF } from '@react-google-maps/api';
 import { siteConfig } from '@/data/siteConfig';
+import { toast } from 'sonner';
 
-// Map Styles
 const darkMapStyle = [ { elementType: "geometry", stylers: [{ color: "#242f3e" }] }, { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] }, { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] }, { featureType: "administrative.locality", elementType: "labels.text.fill", stylers: [{ color: "#d59563" }] }, { featureType: "poi", stylers: [{ visibility: "off" }] }, { featureType: "road", elementType: "geometry", stylers: [{ color: "#38414e" }] }, { featureType: "road", elementType: "geometry.stroke", stylers: [{ color: "#212a37" }] }, { featureType: "road", elementType: "labels.text.fill", stylers: [{ color: "#9ca5b3" }] }, { featureType: "road.highway", elementType: "geometry", stylers: [{ color: "#746855" }] }, { featureType: "road.highway", elementType: "geometry.stroke", stylers: [{ color: "#1f2835" }] }, { featureType: "road.highway", elementType: "labels.text.fill", stylers: [{ color: "#f3d19c" }] }, { featureType: "transit", stylers: [{ visibility: "off" }] }, { featureType: "water", elementType: "geometry", stylers: [{ color: "#17263c" }] }, { featureType: "water", elementType: "labels.text.fill", stylers: [{ color: "#515c6d" }] }, { featureType: "water", elementType: "labels.text.stroke", stylers: [{ color: "#17263c" }] } ];
 const lightMapStyle = [ { "featureType": "poi", "stylers": [{ "visibility": "off" }] }, { "featureType": "road", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "transit", "stylers": [{ "visibility": "off" }] } ];
 
 const ContactPage = () => {
-  const { isLoaded } = useJsApiLoader({ id: 'google-map-script', googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY });
+  const { isLoaded } = useJsApiLoader({ id: 'google-map-script-contact', googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY });
   const containerStyle = { width: '100%', height: '100%' };
   const center = siteConfig.mapCoordinates;
   const currentHour = new Date().getHours();
   const isNight = currentHour >= 18 || currentHour < 6;
   const activeMapStyle = isNight ? darkMapStyle : lightMapStyle;
+
+  // --- FORM STATE MANAGEMENT ---
+  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // IMPORTANT: Make sure this is the correct endpoint for your CONTACT form
+    const contactFormEndpoint = 'https://formspree.io/f/mnnbypbe'; // e.g., 'https://formspree.io/f/mnnbypbe'
+    
+    try {
+      const response = await fetch(contactFormEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast.success("Message sent successfully! We'll be in touch soon.");
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      toast.error("An error occurred. Please check your connection.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+  // --- END FORM STATE ---
 
   return (
     <div className="bg-background">
@@ -40,20 +77,20 @@ const ContactPage = () => {
             <div>
               <Card className="p-8 shadow-lg">
                 <h2 className="text-3xl font-bold text-primary font-montserrat mb-6">Send Us a Message</h2>
-                <form className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-6">
-                    <Input placeholder="Full Name" />
-                    <Input placeholder="Email Address" type="email" />
+                    <Input name="name" placeholder="Full Name" value={formData.name} onChange={handleChange} required />
+                    <Input name="email" placeholder="Email Address" type="email" value={formData.email} onChange={handleChange} required />
                   </div>
                   <div>
-                    <Input placeholder="Subject" />
+                    <Input name="subject" placeholder="Subject" value={formData.subject} onChange={handleChange} required />
                   </div>
                   <div>
-                    <Textarea placeholder="Your Message..." className="min-h-[150px]" />
+                    <Textarea name="message" placeholder="Your Message..." className="min-h-[150px]" value={formData.message} onChange={handleChange} required />
                   </div>
                   <div className="text-left">
-                    <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-10 py-6">
-                      Send Message
+                    <Button type="submit" size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-10 py-6" disabled={isSubmitting}>
+                      {isSubmitting ? 'Sending...' : 'Send Message'}
                     </Button>
                   </div>
                 </form>

@@ -7,7 +7,6 @@ import PromotionalSlideshow from './PromotionalSlideshow';
 import { GoogleMap, useJsApiLoader, MarkerF } from '@react-google-maps/api';
 import { siteConfig } from '@/data/siteConfig';
 
-// Map Styles are correctly included
 const darkMapStyle = [ { elementType: "geometry", stylers: [{ color: "#242f3e" }] }, { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] }, { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] }, { featureType: "administrative.locality", elementType: "labels.text.fill", stylers: [{ color: "#d59563" }] }, { featureType: "poi", stylers: [{ visibility: "off" }] }, { featureType: "road", elementType: "geometry", stylers: [{ color: "#38414e" }] }, { featureType: "road", elementType: "geometry.stroke", stylers: [{ color: "#212a37" }] }, { featureType: "road", elementType: "labels.text.fill", stylers: [{ color: "#9ca5b3" }] }, { featureType: "road.highway", elementType: "geometry", stylers: [{ color: "#746855" }] }, { featureType: "road.highway", elementType: "geometry.stroke", stylers: [{ color: "#1f2835" }] }, { featureType: "road.highway", elementType: "labels.text.fill", stylers: [{ color: "#f3d19c" }] }, { featureType: "transit", stylers: [{ visibility: "off" }] }, { featureType: "water", elementType: "geometry", stylers: [{ color: "#17263c" }] }, { featureType: "water", elementType: "labels.text.fill", stylers: [{ color: "#515c6d" }] }, { featureType: "water", elementType: "labels.text.stroke", stylers: [{ color: "#17263c" }] } ];
 const lightMapStyle = [ { "featureType": "poi", "stylers": [{ "visibility": "off" }] }, { "featureType": "road", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "transit", "stylers": [{ "visibility": "off" }] } ];
 
@@ -31,7 +30,7 @@ const VisitAndReviews = () => {
   }, []);
 
   return (
-    <section className="pt-6 pb-20 bg-background">
+    <section className="py-12 lg:py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold text-primary font-montserrat mb-4">
@@ -55,8 +54,15 @@ const VisitAndReviews = () => {
             <Card>
               <CardContent className="p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div><p className="font-semibold text-primary text-center sm:text-left">{siteConfig.address}</p></div>
-                <a href={`https://developers.google.com/maps/documentation/javascript/advanced-markers/migration0${encodeURIComponent(siteConfig.address)}`} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                  <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-primary-foreground w-full"><Navigation className="mr-2 h-4 w-4"/>Directions</Button>
+                <a 
+                  href={`https://www.google.com/maps/dir//2911+District+Ave+Unit+140,+Fairfax,+VA+22031/@38.8718187,-77.3118178,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89b64b5dc29716df:0x3424aa603fed097f!2m2!1d-77.2294169!2d38.8718477?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D${encodeURIComponent(siteConfig.address)}`} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="w-full sm:w-auto"
+                >
+                  <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-primary-foreground w-full">
+                    <Navigation className="mr-2 h-4 w-4"/>Directions
+                  </Button>
                 </a>
               </CardContent>
             </Card>
@@ -64,7 +70,7 @@ const VisitAndReviews = () => {
               <CardContent className="p-6">
                 <p className="text-primary font-semibold mb-2">Reservation Recommended</p>
                 <p className="text-muted-foreground text-sm leading-relaxed">To ensure the best dining experience, we highly recommend making a reservation.</p>
-                <a href="#reservations" className="block w-full mt-4">
+                <a href="https://www.opentable.com/r/naja-mediterranean-fairfax" target="_blank" rel="noopener noreferrer" className="block w-full mt-4">
                   <Button variant="outline" className="w-full border-accent text-accent hover:bg-accent hover:text-primary-foreground">Reserve Now</Button>
                 </a>
               </CardContent>

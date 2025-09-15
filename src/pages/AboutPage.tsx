@@ -73,9 +73,11 @@ const AboutPage = () => {
             <Card className="inline-block p-8 bg-secondary/50 shadow-lg">
               <h3 className="text-2xl font-bold text-primary mb-4">Experience the Story Yourself</h3>
               <p className="text-muted-foreground mb-6">Join us for a memorable dining experience.</p>
-              <Button size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-primary-foreground text-lg px-10 py-6">
-                Book a Table
-              </Button>
+              <a href="https://www.opentable.com/r/naja-mediterranean-fairfax" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-primary-foreground text-lg px-10 py-6">
+                  Book a Table
+                </Button>
+              </a>
             </Card>
           </div>
 
